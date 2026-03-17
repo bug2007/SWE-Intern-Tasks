@@ -64,6 +64,8 @@ img {
 }
 
 .navbar.navbar-scroll {
+    background: none;
+    background-color: rgba(189, 31, 23, 0.9);
     backdrop-filter: blur(30px);
 }
 
