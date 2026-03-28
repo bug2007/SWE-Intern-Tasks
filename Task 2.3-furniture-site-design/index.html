@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Furniro">
+            <p class="furniro">Furniro</p>
+        </div>
+
+        <div class="navbar-menu">
+            <ul class="menu-list">
+                <li class="menu-item item-1">
+                    <a href="#">Home</a>
+                </li>
+                <li class="menu-item item-2">
+                    <a href="#">Shop</a>
+                </li>
+                <li class="menu-item item-3">
+                    <a href="#">About</a>
+                </li>
+                <li class="menu-item item-4">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-icons">
+            <a class="user-alert">
+                <i class="fa fa-user"></i>
+                <i class="fa fa-exclamation"></i>
+            </a>
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="navbar-mobile-menu">
+            <div class="navbar-mobile-menu-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <!-- Mobile menu items -->
+            <div class="navbar-mobile-menu-items">
+                <ul class="navbar-mobile-menu-list">
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link">Home</a>
+                    </li>   
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link">Shop</a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link">About</a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link">Contact</a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link"><i class="fa fa-user"></i><i class="fa fa-exclamation"></i></a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link"><i class="fas fa-heart"></i></a>
+                    </li>
+                    <li class="navbar-mobile-menu-item">
+                        <a href="#" class="navbar-mobile-menu-link"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <p>New Arrival</p>
+            <h1>Discover Our New Collection</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quod similique dolore aspernatur sed inventore.</p>
+            <button class="hero-button btn">BUY NOW</button>
+        </div>
+    </section>
+
+    <section class="browse">
+        <div class="browse-content container-lg">
+            <div class="text">
+                <h2>Browse The Range</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="browse-rooms">
+                <div class="browse-room dining">
+                    <img src="images/dining.png" alt="Dining">
+                    <p>Dining</p> 
+                </div>
+                <div class="browse-room living">
+                    <img src="images/living.png" alt="Living">
+                    <p>Living</p> 
+                </div>
+                <div class="browse-room bedroom">
+                    <img src="images/bedroom.png" alt="Bedroom">
+                    <p>Bedroom</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-products">
+        <div class="products-content container-lg">
+            <h1>Our Products</h1>
+            <div class="products">
+                <div class="product product-1">
+                    <img src="images/slytherine.png" alt="Slytherine">
+                    <div class="pink-circle">-30%</div>
+                    <div class="product-text">
+                        <p>Slytherine</p>
+                        <p>Stylish cafe chair</p>
+                        <div class="product-price">
+                            <p>Rp 2.500.000</p>
+                            <s>Rp 3.500.000</s>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-2">
+                    <img src="images/leviosa.png" alt="Leviosa">
+                    <div class="product-text">
+                        <p>Leviosa</p>
+                        <p>Stylish cafe chair</p>
+                        <div class="product-price">
+                            <p>Rp 2.500.000</p>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-3">
+                    <img src="images/lolito.png" alt="Lolito">
+                    <div class="pink-circle">-50%</div>
+                    <div class="product-text">
+                        <p>Lolito</p>
+                        <p>Luxury big sofa</p>
+                        <div class="product-price">
+                            <p>Rp 7.000.000</p>
+                            <s>Rp 14.000.000</s>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-4">
+                    <img src="images/respira.jpg" alt="Respira">
+                    <div class="green-circle">New</div>
+                    <div class="product-text">
+                        <p>Respira</p>
+                        <p>Outdoor bar table and stool</p>
+                        <div class="product-price">
+                            <p>Rp 500.000</p>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-5">
+                    <img src="images/grifo.png" alt="Grifo">
+                    <div class="product-text">
+                        <p>Grifo</p>
+                        <p>Night Lamp</p>
+                        <div class="product-price">
+                            <p>Rp 1.500.000</p>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-6">
+                    <img src="images/muggo.png" alt="Muggo">
+                    <div class="green-circle">New</div>
+                    <div class="product-text">
+                        <p>Muggo</p>
+                        <p>Small mug</p>
+                        <div class="product-price">
+                            <p>Rp 150.000</p>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-7">
+                    <img src="images/pingky.jpg" alt="Pingky">
+                    <div class="pink-circle">-50%</div>
+                    <div class="product-text">
+                        <p>Pingky</p>
+                        <p>Cute bed set</p>
+                        <div class="product-price">
+                            <p>Rp 7.000.000</p>
+                            <s>Rp 14.000.000</s>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product-8">
+                    <img src="images/potty.jpg" alt="Potty">
+                    <div class="green-circle">New</div>
+                    <div class="product-text">
+                        <p>Potty</p>
+                        <p>Minimalist flower pot</p>
+                        <div class="product-price">
+                            <p>Rp 500.000</p>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">Add to cart</button>
+                        <div class="share-compare-like-buttons">
+                            <button class="share"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="compare"><i class="fas fa-exchange-alt"></i> Compare</button>
+                            <button class="like"><i class="fas fa-heart"></i> Like</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="show-more-btn btn">Show More</button>
+        </div>
+    </section>
+
+    <section class="beautiful-rooms">
+        <div class="beautiful-rooms-content container-lg">
+            <div class="text-rooms-flex">
+                <div class="text">
+                    <h1>50+ Beautiful rooms inspiration</h1>
+                    <p>Our designer already made a lot of beautiful prototipe
+                        of rooms that inspire you
+                    </p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+                <div class="inner-peace">
+                    <img src="images/inner-peace.png" alt="Bed Room">
+                    <div class="inner-peace-overlay-1">
+                        <p>01 <span class="border"></span> Bed Room</p>
+                        <p>Inner Peace</p>
+                        <div class="inner-peace-overlay-2"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="rooms">
+                    <div class="rooms-images">
+                        <img src="images/room-1.png" alt="Room 1">
+                        <img src="images/room-2.png" alt="Room 2">
+                        <img src="images/room-3.jpg" alt="Room 3">
+                        <img src="images/room-4.jpg" alt="Room 4">
+                    </div>
+                    <div class="rooms-dots">
+                        <span class="dot dot-1 active"></span>
+                        <span class="dot dot-2"></span>
+                        <span class="dot dot-3"></span>
+                        <span class="dot dot-4"></span>
+                    </div>
+                    <div class="rooms-arrows">
+                        <button class="prev-arrow">&lt;</button>
+                        <button class="next-arrow">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="furniture">
+        <p>Share your setup with</p>
+        <h1>#FurniroFurniture</h1>
+        <div class="furniture-grid">
+            <div class="furniture-1">
+                <img src="images/furniture-1.png" alt="Furniture 1">
+            </div>
+            <div class="furniture-2">
+                <img src="images/furniture-2.png" alt="Furniture 2">
+            </div>
+            <div class="furniture-3">
+                <img src="images/furniture-3.png" alt="Furniture 3">
+            </div>
+            <div class="furniture-4">
+                <img src="images/furniture-4.png" alt="Furniture 4">
+            </div>
+            <div class="furniture-5">
+                <img src="images/furniture-5.png" alt="Furniture 5">
+            </div>
+            <div class="furniture-6">
+                <img src="images/furniture-6.png" alt="Furniture 6">
+            </div>
+            <div class="furniture-7">
+                <img src="images/furniture-7.png" alt="Furniture 7">
+            </div>
+            <div class="furniture-8">
+                <img src="images/furniture-8.png" alt="Furniture 8">
+            </div>
+            <div class="furniture-9">
+                <img src="images/furniture-9.png" alt="Furniture 9">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-flex">
+            <div class="address">
+                <p>Furniro.</p>
+                <p>400 Univeristy Drive Suite 200 Coral Gables, FL 3314 USA</p>
+            </div>
+            <div class="links">
+                <p>Links</p>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="help">
+                <p>Help</p>
+                <a href="#">Payment Options</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policies</a>
+            </div>
+            <div class="newsletter">
+                <p>Newsletter</p>
+                <div class="email-subscribe">
+                    <input type="email" placeholder="Enter Your Email Address">
+                    <input type="button" value="SUBSCRIBE">
+                </div>
+            </div>
+        </div>
+        <div class="border"></div>
+        <p>2026 furniro. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
