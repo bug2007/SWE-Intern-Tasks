@@ -1,0 +1,19 @@
+body, html {
+    overflow-x: hidden;
+}
+
+
+.services .list-group-item.active {
+    border-radius: 8px !important;
+    background-color: rgba(247, 165, 130, 1);
+    border: none;
+}
+.services li a {
+    color: rgba(59, 58, 58, 1);
+}
+
+nav.blur-filter {
+    backdrop-filter: blur(8px);
+}
+
+
