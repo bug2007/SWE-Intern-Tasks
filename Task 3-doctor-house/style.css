@@ -16,4 +16,33 @@ nav.blur-filter {
     backdrop-filter: blur(8px);
 }
 
+.doctors a {
+    color: rgba(247, 165, 130, 1);
+    background-color: white;
+    border-color: 1px solid rgba(247, 165, 130, 1);
 
+    &:hover {
+        background-color: rgba(247, 165, 130, 1);
+        color: white;
+    }
+}
+
+.breadcrumb-item::before {
+    color: white !important;
+}
+
+.one-doctor-details li.active {
+    background-color: rgba(247, 165, 130, 1);
+    border: none;
+    a {
+        color: white;
+    }    
+}
+
+.disc {
+    list-style-type: disc;
+}
+
+.contact input::placeholder {
+    color: white;
+}
