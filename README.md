@@ -7,3 +7,4 @@
 - Simple Clock UI - [Live Demo](https://simple-clock-ui-xi.vercel.app/)
 - Restaurant Landing Page - [Live Demo](https://restaurant-landingg-page.vercel.app/)
 - Doctor House - [Live Demo](https://doctor-house-fawn.vercel.app/)
+- Loader - [Live Demo](https://loader-mauve.vercel.app/)
