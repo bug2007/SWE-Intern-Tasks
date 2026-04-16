@@ -140,8 +140,8 @@
         <div class="row mt-5">
             <div class="card pt-4 border-0 mb-5">
                 <div class="card-header border-0 bg-white">
-                    <ul class="list-group list-group-horizontal-md list-unstyled text-center">
-                        <li class="list-group-item border-top-0 border-start-0 border-end-0 list-group-item-action active py-3">
+                    <div class="list-group list-group-horizontal-md text-center">
+                        <!-- <li class="list-group-item border-top-0 border-start-0 border-end-0 list-group-item-action active py-3">
                             <a href="#" class="text-decoration-none fw-semibold stretched-link">Overview</a>
                         </li>
                         <li class="list-group-item border-top-0 border-start-0 border-end-0 list-group-item-action py-3">
@@ -152,83 +152,107 @@
                         </li>
                         <li class="list-group-item border-top-0 border-start-0 border-end-0 list-group-item-action py-3">
                             <a href="#" class="text-decoration-none fw-semibold stretched-link" style="color: rgba(108, 107, 107, 1);">Business Hours</a>
-                        </li>
-                    </ul>
+                        </li> -->
+                        <a href="#overview" class="list-group-item list-group-item-action active fw-bold border-top-0 border-start-0 border-end-0" data-bs-toggle="list" style="color: rgba(59, 58, 58, 1);">Overview</a>
+                        <a href="#locations" class="list-group-item list-group-item-action fw-bold border-top-0 border-start-0 border-end-0" data-bs-toggle="list" style="color: rgba(59, 58, 58, 1);">Locations</a>
+                        <a href="#reviews" class="list-group-item list-group-item-action fw-bold border-top-0 border-start-0 border-end-0" data-bs-toggle="list" style="color: rgba(59, 58, 58, 1);">Reviews</a>
+                        <a href="#business-hours" class="list-group-item list-group-item-action fw-bold border-top-0 border-start-0 border-end-0" data-bs-toggle="list" style="color: rgba(59, 58, 58, 1);">Business Hours</a>
+                    </div>
                 </div>
                 <div class="card-body" style="color: rgba(59, 58, 58, 1);">
-                    <p class="fw-bold">About Me</p>
-                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magni repudiandae odit fugit et similique vero expedita aspernatur ab iste accusamus, autem ratione sint, architecto minima sit obcaecati fuga illo numquam illum fugiat exercitationem! Molestiae corporis amet aut repellendus quisquam voluptatem, tempore porro at officiis recusandae nesciunt necessitatibus debitis? Quas perspiciatis asperiores similique, mollitia dolore iusto maiores blanditiis numquam pariatur?</p>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <p class="fw-bold">Education</p>
-                            <ul>
-                                <li class="fw-bold small">American Dental Medical University
-                                    <ul class="list-unstyled fw-normal">
-                                        <li>BDS</li>
-                                        <li>1998 - 2003</li>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="overview">
+                            <p class="fw-bold">About Me</p>
+                            <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magni repudiandae odit fugit et similique vero expedita aspernatur ab iste accusamus, autem ratione sint, architecto minima sit obcaecati fuga illo numquam illum fugiat exercitationem! Molestiae corporis amet aut repellendus quisquam voluptatem, tempore porro at officiis recusandae nesciunt necessitatibus debitis? Quas perspiciatis asperiores similique, mollitia dolore iusto maiores blanditiis numquam pariatur?</p>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p class="fw-bold">Education</p>
+                                    <ul>
+                                        <li class="fw-bold small">American Dental Medical University
+                                            <ul class="list-unstyled fw-normal">
+                                                <li>BDS</li>
+                                                <li>1998 - 2003</li>
+                                            </ul>
+                                        </li>
+                                        <li class="fw-bold small">American Dental Medical University
+                                            <ul class="list-unstyled fw-normal">
+                                                <li>MDS</li>
+                                                <li>2003 - 2005</li>
+                                            </ul>
+                                        </li>
                                     </ul>
-                                </li>
-                                <li class="fw-bold small">American Dental Medical University
-                                    <ul class="list-unstyled fw-normal">
-                                        <li>MDS</li>
-                                        <li>2003 - 2005</li>
+                                    <p class="fw-bold">Work & Experience</p>
+                                    <ul>
+                                        <li class="fw-bold small">Glowing Smiles Family Dental Clinic
+                                            <ul class="list-unstyled fw-normal">
+                                                <li>2010 - Present (5 years)</li>
+                                            </ul>
+                                        </li>
+                                        <li class="fw-bold small">Comfort Care Dental Clinic
+                                            <ul class="list-unstyled fw-normal">
+                                                <li>2007 - 2010 (3 years)</li>
+                                            </ul>
+                                        </li>
+                                        <li class="fw-bold small">Dream Smile Dental Practice
+                                            <ul class="list-unstyled fw-normal">
+                                                <li>2005 - 2007 (2 years)</li>
+                                            </ul>
+                                        </li>
                                     </ul>
-                                </li>
-                            </ul>
-                            <p class="fw-bold">Work & Experience</p>
-                            <ul>
-                                <li class="fw-bold small">Glowing Smiles Family Dental Clinic
-                                    <ul class="list-unstyled fw-normal">
-                                        <li>2010 - Present (5 years)</li>
+                                    <p class="fw-bold">Services</p>
+                                    <ul class="small">
+                                        <li>Tooth Cleaning</li>
+                                        <li>Root Canal Theory</li>
+                                        <li>Implants</li>
+                                        <li>Composite Bonding</li>
+                                        <li>Fissure Bonding</li>
+                                        <li>Surgical Extractions</li>
                                     </ul>
-                                </li>
-                                <li class="fw-bold small">Comfort Care Dental Clinic
-                                    <ul class="list-unstyled fw-normal">
-                                        <li>2007 - 2010 (3 years)</li>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Awards</p>
+                                    <ul class="small">
+                                        <p class="m-0">July 2019</p>
+                                        <li class="fw-bold">Humanitarian Award</li>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur necessitatibus voluptate praesentium ad iusto nobis illo eos.</p>
                                     </ul>
-                                </li>
-                                <li class="fw-bold small">Dream Smile Dental Practice
-                                    <ul class="list-unstyled fw-normal">
-                                        <li>2005 - 2007 (2 years)</li>
+                                    <ul class="small">
+                                        <p class="m-0">March 2011</p>
+                                        <li class="fw-bold">Certificate for International Volunteer Service</li>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus harum perspiciatis eaque fuga sapiente magni enim quia!</p>
                                     </ul>
-                                </li>
-                            </ul>
-                            <p class="fw-bold">Services</p>
-                            <ul class="small">
-                                <li>Tooth Cleaning</li>
-                                <li>Root Canal Theory</li>
-                                <li>Implants</li>
-                                <li>Composite Bonding</li>
-                                <li>Fissure Bonding</li>
-                                <li>Surgical Extractions</li>
-                            </ul>
+                                    <ul>
+                                        <p class="m-0 small">March 2008</p>
+                                        <li class="fw-bold small">The Dental Professional of The Year Award</li>
+                                        <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus harum perspiciatis eaque fuga sapiente magni enim quia!</p>
+                                        <p class="fw-bold">Specializations</p>
+                                        <ul class="disc small">
+                                            <li>Children Care</li>
+                                            <li>Dental Care</li>
+                                            <li>Oral and Maxillofacial Surgery</li>
+                                            <li>Orthodontist</li>
+                                            <li>Periodontist</li>
+                                            <li>Prosthodontics</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <p class="fw-bold">Awards</p>
-                            <ul class="small">
-                                <p class="m-0">July 2019</p>
-                                <li class="fw-bold">Humanitarian Award</li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur necessitatibus voluptate praesentium ad iusto nobis illo eos.</p>
-                            </ul>
-                            <ul class="small">
-                                <p class="m-0">March 2011</p>
-                                <li class="fw-bold">Certificate for International Volunteer Service</li>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus harum perspiciatis eaque fuga sapiente magni enim quia!</p>
-                            </ul>
-                            <ul>
-                                <p class="m-0 small">March 2008</p>
-                                <li class="fw-bold small">The Dental Professional of The Year Award</li>
-                                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus harum perspiciatis eaque fuga sapiente magni enim quia!</p>
-                                <p class="fw-bold">Specializations</p>
-                                <ul class="disc small">
-                                    <li>Children Care</li>
-                                    <li>Dental Care</li>
-                                    <li>Oral and Maxillofacial Surgery</li>
-                                    <li>Orthodontist</li>
-                                    <li>Periodontist</li>
-                                    <li>Prosthodontics</li>
-                                </ul>
-                            </ul>
+
+                        <div class="tab-pane fade" id="locations">
+                            <p class="small">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi dolorem voluptas cupiditate quod ab animi voluptatibus molestiae dicta, doloremque molestias perspiciatis nobis magni nam dolore deserunt asperiores sapiente ipsum expedita rem ducimus reiciendis consectetur. Ea quisquam esse sint molestiae voluptatem tenetur dignissimos consequuntur praesentium eligendi sit mollitia perferendis officiis obcaecati sed, ducimus minima optio facilis nesciunt, dolores voluptatum in. Facere praesentium cumque qui, a, quam dolorum nemo velit ipsum, rem id sed quaerat nesciunt laborum exercitationem voluptatem. Suscipit minima eveniet fugit impedit nihil, veritatis esse tenetur nemo in eum ducimus cumque et at non nostrum asperiores aliquam quas repellendus laboriosam! Id voluptatem tempore quis nobis perspiciatis pariatur sunt, laborum maiores eveniet molestiae obcaecati est amet minus, temporibus veritatis incidunt dolor suscipit, aliquam sequi quasi quo ut. Veniam laudantium, odit nihil consequatur reiciendis minima asperiores necessitatibus numquam praesentium dolores perspiciatis eaque sint! Debitis, cumque non numquam tempora pariatur magni quia culpa assumenda voluptatum impedit placeat maxime quod dignissimos doloremque blanditiis asperiores, possimus voluptate est voluptates. Maxime velit voluptatibus vel perspiciatis nobis nemo voluptatum ipsam tempora deserunt sequi autem non nam dolore soluta esse culpa consectetur quo porro repellat facere, amet odit? Obcaecati id tenetur nulla molestiae neque animi temporibus ratione?
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="reviews">
+                            <p class="small">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi dolorem voluptas cupiditate quod ab animi voluptatibus molestiae dicta, doloremque molestias perspiciatis nobis magni nam dolore deserunt asperiores sapiente ipsum expedita rem ducimus reiciendis consectetur. Ea quisquam esse sint molestiae voluptatem tenetur dignissimos consequuntur praesentium eligendi sit mollitia perferendis officiis obcaecati sed, ducimus minima optio facilis nesciunt, dolores voluptatum in. Facere praesentium cumque qui, a, quam dolorum nemo velit ipsum, rem id sed quaerat nesciunt laborum exercitationem voluptatem. Suscipit minima eveniet fugit impedit nihil, veritatis esse tenetur nemo in eum ducimus cumque et at non nostrum asperiores aliquam quas repellendus laboriosam! Id voluptatem tempore quis nobis perspiciatis pariatur sunt, laborum maiores eveniet molestiae obcaecati est amet minus, temporibus veritatis incidunt dolor suscipit, aliquam sequi quasi quo ut. Veniam laudantium, odit nihil consequatur reiciendis minima asperiores necessitatibus numquam praesentium dolores perspiciatis eaque sint! Debitis, cumque non numquam tempora pariatur magni quia culpa assumenda voluptatum impedit placeat maxime quod dignissimos doloremque blanditiis asperiores, possimus voluptate est voluptates. Maxime velit voluptatibus vel perspiciatis nobis nemo voluptatum ipsam tempora deserunt sequi autem non nam dolore soluta esse culpa consectetur quo porro repellat facere, amet odit? Obcaecati id tenetur nulla molestiae neque animi temporibus ratione?
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="business-hours">
+                            <p class="small">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi dolorem voluptas cupiditate quod ab animi voluptatibus molestiae dicta, doloremque molestias perspiciatis nobis magni nam dolore deserunt asperiores sapiente ipsum expedita rem ducimus reiciendis consectetur. Ea quisquam esse sint molestiae voluptatem tenetur dignissimos consequuntur praesentium eligendi sit mollitia perferendis officiis obcaecati sed, ducimus minima optio facilis nesciunt, dolores voluptatum in. Facere praesentium cumque qui, a, quam dolorum nemo velit ipsum, rem id sed quaerat nesciunt laborum exercitationem voluptatem. Suscipit minima eveniet fugit impedit nihil, veritatis esse tenetur nemo in eum ducimus cumque et at non nostrum asperiores aliquam quas repellendus laboriosam! Id voluptatem tempore quis nobis perspiciatis pariatur sunt, laborum maiores eveniet molestiae obcaecati est amet minus, temporibus veritatis incidunt dolor suscipit, aliquam sequi quasi quo ut. Veniam laudantium, odit nihil consequatur reiciendis minima asperiores necessitatibus numquam praesentium dolores perspiciatis eaque sint! Debitis, cumque non numquam tempora pariatur magni quia culpa assumenda voluptatum impedit placeat maxime quod dignissimos doloremque blanditiis asperiores, possimus voluptate est voluptates. Maxime velit voluptatibus vel perspiciatis nobis nemo voluptatum ipsam tempora deserunt sequi autem non nam dolore soluta esse culpa consectetur quo porro repellat facere, amet odit? Obcaecati id tenetur nulla molestiae neque animi temporibus ratione?
+                            </p>
                         </div>
                     </div>
                 </div>
