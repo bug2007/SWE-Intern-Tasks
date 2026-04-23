@@ -48,3 +48,8 @@ nav.blur-filter {
 .carousel-control-prev-icon {
     color: rgba(247, 165, 130, 1) !important;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
