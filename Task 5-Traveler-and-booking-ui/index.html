@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png">
     <title>myDreamPlace | Home</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top pt-3">
         <div class="container-md">
             <div class="brand">
                 <img src="images/favicon.png" alt="">
@@ -39,13 +44,202 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contact</a>
                     </li>
+                    <button class="d-md-none register-btn btn border-2 mt-2 mb-3" style="border-color: #2F80ED; color: #2F80ED;">Register</button>
+                    <button class="d-md-none sign-in-btn btn text-white" style="background-color: #2F80ED;">Sign In</button>
                 </ul>
             </div>
-            <button class="register-btn btn border-2" style="border-color: #2F80ED; color: #2F80ED;">Register</button>
-            <button class="sign-in-btn btn text-white ms-3" style="background-color: #2F80ED;">Sign In</button>
+            <button class="d-md-block d-none register-btn btn border-2" style="border-color: #2F80ED; color: #2F80ED;">Register</button>
+            <button class="d-md-block d-none sign-in-btn btn text-white ms-2" style="background-color: #2F80ED;">Sign In</button>
         </div>
     </nav>
 
+    <section class="hero mt-5 pt-5">
+        <div class="container-md">
+            <div class="hero-banner text-white rounded-3 position-relative overflow-hidden" style="background-image: url(images/hero.jpg); height: 500px; background-size: cover; background-position: center 27%;">
+                <div class="overlay w-100 h-100 top-0 start-0 position-absolute" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                <div class="text-content z-2 position-relative d-flex flex-column align-items-center h-100 justify-content-center">
+                    <h2>Enjoy Your Dream Vacation</h2>
+                    <p class="w-50 fs-5 text-center">Plan and book our perfect trip with expert advice, travel tips, destination information and inspiration from us</p>
+                </div>
+            </div>
+            <div class="hstack gap-2 mx-auto position-relative translate-middle-y rounded p-2 justify-content-center" style="box-shadow: 0 4px 37px 0 rgba(0, 0, 0, 0.15); width: 1010px; background-color: #fff;">
+                <input type="text" placeholder="Where are you going?" class="bg-body-secondary border-0 rounded py-2 px-3" style="width: 260px;">
+                <input type="date" placeholder="Check in date" class="bg-body-secondary border-0 rounded py-2 px-3" style="width: 170px;">
+                <input type="date" placeholder="Check out date" class="bg-body-secondary border-0 rounded py-2 px-3" style="width: 170px;">
+                <input type="text" placeholder="Guests" class="bg-body-secondary border-0 rounded py-2 px-3" style="width: 210px;">
+                <button type="button" class="btn btn-primary" style="width: 148px;">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-md mt-4">
+        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+    </div>
+
+    <section class="plans mt-5 mb-5">
+        <div class="container-md">
+            <div class="text-content1 mb-4">
+                <h4>Enjoy your dream vacation</h4>
+                <p class="w-50">Plan and book our perfect trip with expert advice, travel tips, destination information and inspiration from us</p>
+            </div>
+            <div class="row gx-3">
+                <div class="col-md-3 mb-4">
+                    <img src="images/australia.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 220px; object-fit: cover;">
+                    <p class="fw-bold m-0">Australia</p>
+                    <p class="m-0 small">2246 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/japan.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 220px; object-fit: cover;">
+                    <p class="fw-bold m-0">Japan</p>
+                    <p class="m-0 small">1278 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/new-zealand.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 220px; object-fit: cover;">
+                    <p class="fw-bold m-0">New Zealand</p>
+                    <p class="m-0 small">480 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/greece.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 220px; object-fit: cover;">
+                    <p class="fw-bold m-0">Greece</p>
+                    <p class="m-0 small">320 properties</p>
+                </div>
+            </div>
+
+            <div class="row mt-4 gx-3 text-white">
+                <h4 class="mb-4" style="color: black;">Get inspiration for your next trip</h4>
+                <div class="col-md-4 mb-4">
+                    <div class="px-4 inspo-1 d-flex position-relative overflow-hidden rounded-3" style="height: 280px;  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(images/inspo-1.jpg) center 27% / cover;">
+                        <div class="text-content z-2 mt-auto">
+                            <h5>Sydney's 10 most fashionable 5 star hotels</h5>
+                            <p>Browse the fastest growing tourism sector in the heart of Australia tourism capital ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="px-4 inspo-1 d-flex position-relative overflow-hidden rounded-3" style="height: 280px;  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(images/inspo-2.jpg) center 27% / cover;">
+                        <div class="text-content z-2 mt-auto">
+                            <h5>Top cities for Vegan Travellers</h5>
+                            <p>Top sites where you do not have to worry about being a vegan. Our tourise guide is ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="px-4 inspo-1 d-flex position-relative overflow-hidden rounded-3" style="height: 280px;  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(images/inspo-3.jpg) center 27% / cover;">
+                        <div class="text-content z-2 mt-auto">
+                            <h5>World's top destinations during and post covid timeline</h5>
+                            <p>Pandemic is still intact and will be here for a longer time. Here's where your next destination ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 gx-3">
+                <h4 class="mb-4">Popular hotels</h4>
+                <div class="col-md-3 mb-4">
+                    <img src="images/hotel-1.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="fw-bold m-0">Lakeside Motel Warefront</p>
+                    <p class="m-0 small">2246 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/hotel-2.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="fw-bold m-0">Recee Graham resort</p>
+                    <p class="m-0 small">1278 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/hotel-3.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="fw-bold m-0">Firesisde Dinners</p>
+                    <p class="m-0 small">480 properties</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <img src="images/hotel-4.jpg" alt="" class="img-fluid rounded-3 mb-2 w-100" style="height: 300px; object-fit: cover;">
+                    <p class="fw-bold m-0">Oculous Inn Stay</p>
+                    <p class="m-0 small">320 properties</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content rounded overflow-hidden" style="height: 280px; background: url(images/download-mobile-app-1.jpg) center / cover;">
+                        <div class="row justify-content-center">
+                            <div class="col-md-5 d-flex flex-column justify-content-center align-items-start text-white">
+                                <h4>Download the mobile application for bonus coupons and travel codes</h4>
+                                <button type="button" class="btn btn-primary py-2 mt-3">Download mobile app</button>
+                            </div>
+                            <div class="col-md-6 ps-5">
+                                <img src="images/download-mobile-app-2.png" alt="" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover; object-position: center 30%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-md">
+        <div class="heading text-center mb-5">
+            <h4>Explore the world with My Dream Place</h4>
+            <p class="text-primary">Discover new pieces and experiences</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3 d-flex gap-2 justify-content-between">
+                <div class="logo d-flex align-items-start">
+                    <img src="images/favicon.png" alt="" class="mt-2 me-1">
+                    <div class="text-content m-0 p-0">
+                        <p class="fw-semibold fs-5 m-0">my Dream Place</p>
+                        <p class="m-0 w-75 text-muted">Your next goto companion for travel</p>
+                    </div>
+                </div>
+                <div class="company">
+                    <p class="fw-semibold">Company</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Jobs</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Newsroom</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Advertising</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <p class="fw-semibold">Explore</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Australia</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">New Zealand</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">United Atated America (USA)</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Greece</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Maldives</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Singapore</a></li>
+                        <li><a href="#" class="text-decoration-none">See more</a></li>
+                    </ul>
+                </div>
+                <div class="terms-and-policies">
+                    <p class="fw-semibold">Terms and Policies</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms of use</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Reward system policy</a></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <p class="fw-semibold">Help</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Support</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Cancel your bookings</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Use Coupon</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Refund Policies</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">International Travel Documents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid py-2 pe-5 d-flex copyright" style="background-color: rgba(235, 235, 235, 1);">
+        <p class="m-0 ms-auto me-5 pe-5 text-muted">&copy; my Dream Place 2026</p>
+    </div>
+
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
