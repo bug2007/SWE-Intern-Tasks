@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="icon" href="images/favicon.png">
+    <title>myDreamPlace | Home</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar bg-transparent navbar-expand-lg fixed-top pt-3 navbar-dark">
+        <div class="container-md">
+            <div class="brand">
+                <img src="images/favicon.png" alt="">
+                <a href="#" class="navbar-brand ms-1">my Dream Place</a>
+            </div>
+            <button type="button"
+                class="navbar-toggler border-0"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-md-5" id="navbarNav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Discover</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Activites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+           
+            <a href="#"><img src="images/notif.png" alt=""></a>
+            <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown"><img src="images/profile-photo.png" class="rounded-5 ms-4" alt="" style="width: 44px; height: 44px; object-fit: cover;"></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item"><img src="images/profil-dropdown1.png" alt="" class="me-2 align-top">Manage account</a></li>
+                    <li><a href="mytrips.html" class="dropdown-item"><img src="images/profile-dropdown2.png" alt="" class="me-2 align-top">My trips</a></li>
+                    <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown3.png" alt="" class="me-2 align-top">Reward wallet</a></li>
+                    <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown4.png" alt="" class="me-2 align-top">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero mb-5">
+            <div class="" style="height: 200px; background: linear-gradient(to bottom, rgba(41, 105, 191, 1), rgba(20, 78, 157, 1));"></div>
+            <form>
+                <div class="hstack gap-2 mx-auto position-relative translate-middle-y rounded p-2 justify-content-center" style="box-shadow: 0 4px 37px 0 rgba(0, 0, 0, 0.15); width: 1010px; background-color: #fff;">
+                    <div class="location-input position-relative" style="width: 260px;">
+                        <i class="ms-3 bi bi-geo-alt position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" list="locations" placeholder="Where are you going?" class="ps-5 w-100 bg-body-secondary border-0 rounded py-2">
+                        <datalist id="locations">
+                            <option value="New York">
+                            <option value="London">
+                            <option value="Tokyo">
+                            <option value="Paris">
+                        </datalist>
+                    </div>
+                    <div class="checkin-input position-relative" style="width: 170px;">
+                        <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" id="check-in" placeholder="Check in date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <div class="checkout-input position-relative" style="width: 170px;">
+                        <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" id="check-out" placeholder="Check out date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <div class="guest-input position-relative" style="width: 210px;">
+                        <i class="ms-3 bi bi-person position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 148px;">Search</button>
+                </div>
+            </form>
+    </section>
+
+    <section class="search-results mb-5">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card border-0">
+                        <div class="card-header py-4 border-0" style="background-color: rgba(242, 242, 242, 1);">
+                            <h6 class="mb-3">Search by property name</h6>
+                            <div class="position-relative">
+                                <i class="bi bi-search position-absolute top-50 ps-3" style="transform: translateY(-50%);"></i>
+                                <input type="text" class="form-control py-2 ps-5" placeholder="Beach westpalm">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-4 ms-3">Filter by</h5>
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0">Your budget per day</h6>
+                        </div>
+                        <ul class="list-group list-group-flush my-2">
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="budget1" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="budget1" class="flex-grow-1 form-check-label">$0 - $200
+                                    <span class="float-end">200</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="budget2" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="budget2" class="flex-grow-1 form-check-label">$200 - $500
+                                    <span class="float-end">100</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="budget3" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="budget3" class="flex-grow-1 form-check-label">$500 - $1,000
+                                    <span class="float-end">15</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="budget4" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="budget4" class="flex-grow-1 form-check-label">$1000 - $2,000
+                                    <span class="float-end">12</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="budget5" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="budget5" class="flex-grow-1 form-check-label">$2000 - $5000
+                                    <span class="float-end">230</span>
+                                </label>
+                            </li>
+                            <div class="d-flex justify-content-between">
+                                <p class="small text-muted ms-3 my-3">Set your own budget</p>
+                                <label class="theme-switch">
+                                    <!-- clicking anywhere on the label (including the slider) will toggle the checkbox automatically -->
+                                    <input type="checkbox">
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0">Rating</h6>
+                        </div>
+                        <p class="small text-muted mb-2 mt-3 ms-3">Show only ratings more than</p>
+                        <ul class="list-group mx-3 mb-3 list-group-horizontal">
+                            <li class="list-group-item list-group-item-action d-flex">
+                                <input id="star1" type="checkbox" class="form-check-input border-2 d-none" style="width: 20px; height: 20px;">
+                                <label for="star1" class="flex-grow-1 form-check-label">
+                                    1<i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex">
+                                <input id="star2" type="checkbox" class="form-check-input border-2 d-none" style="width: 20px; height: 20px;">
+                                <label for="star2" class="flex-grow-1 form-check-label">
+                                    2<i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex">
+                                <input id="star3" type="checkbox" class="form-check-input border-2 d-none" style="width: 20px; height: 20px;">
+                                <label for="star3" class="flex-grow-1 form-check-label">
+                                    3<i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex">
+                                <input id="star4" type="checkbox" class="form-check-input border-2 d-none" style="width: 20px; height: 20px;">
+                                <label for="star4" class="flex-grow-1 form-check-label">
+                                    4<i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex">
+                                <input id="star5" type="checkbox" class="form-check-input border-2 d-none" style="width: 20px; height: 20px;">
+                                <label for="star5" class="flex-grow-1 form-check-label">
+                                    5<i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0">Popular filters</h6>
+                        </div>
+                        <ul class="list-group list-group-flush mt-2 mb-3">
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular1" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular1" class="flex-grow-1 form-check-label">Free cancellation
+                                    <span class="float-end">200</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular2" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular2" class="flex-grow-1 form-check-label">Spa
+                                    <span class="float-end">100</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular3" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular3" class="flex-grow-1 form-check-label">Beach font
+                                    <span class="float-end">15</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular4" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular4" class="flex-grow-1 form-check-label">Hot tub/jacuzzi
+                                    <span class="float-end">12</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular5" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular5" class="flex-grow-1 form-check-label">Book without credit card
+                                    <span class="float-end">230</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="popular6" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="popular6" class="flex-grow-1 form-check-label">No prepayment
+                                    <span class="float-end">12</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-header py-3">
+                            <h6 class="m-0">Activities</h6>
+                        </div>
+                        <ul class="list-group list-group-flush mt-2 mb-3">
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity1" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity1" class="flex-grow-1 form-check-label">Fishing
+                                    <span class="float-end">200</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity2" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity2" class="flex-grow-1 form-check-label">Hiking
+                                    <span class="float-end">100</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity3" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity3" class="flex-grow-1 form-check-label">Beach
+                                    <span class="float-end">15</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity4" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity4" class="flex-grow-1 form-check-label">Cycling
+                                    <span class="float-end">12</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity5" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity5" class="flex-grow-1 form-check-label">Sauna
+                                    <span class="float-end">230</span>
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 d-flex">
+                                <input id="activity6" type="checkbox" class="form-check-input me-2 border-2" style="width: 20px; height: 20px;">
+                                <label for="activity6" class="flex-grow-1 form-check-label">Night lights
+                                    <span class="float-end">12</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h4 class="mb-4" style="color: black;">Melbourne: 2,582 search results found</h4>
+                    <div class="list-sortby d-flex justify-content-between">
+                        <ul class="list-group list-group-horizontal d-inline-flex">
+                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                                Our top picks
+                            </a>
+                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                                Hotel and apartments
+                            </a>
+                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                                Residence
+                            </a>
+                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                                Resort
+                            </a>
+                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                                Shared space
+                            </a>
+                        </ul>
+                        <div class="dropdown" style="width: 190px;">
+                            <a href="#" class="w-100 btn text-start dropdown-toggle py-0 border" data-bs-toggle="dropdown" id="sortDropdown">
+                                <span class="small text-muted">Sort by</span><br>
+                                <!-- will change depending on what user clicks -->
+                                <span id="selected-sort">Recommended</span>
+                            </a>
+                            <ul class="dropdown-menu" id="sort-options">
+                                <li><a href="#" class="dropdown-item active" data-value="Recommended">Recommended</a></li>
+                                <li><a href="#" class="dropdown-item" data-value="One">One</a></li>
+                                <li><a href="#" class="dropdown-item" data-value="Two">Two</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-group my-4 gap-4">
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result1.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Lakeside Motel Warefront</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-between position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <button class="btn btn-danger text-nowrap px-2 py-0">Book now and receive 15% off</button>
+                                    <div class="details">
+                                        <button class="btn btn-success px-2 py-0 mb-1">5% off</button>
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="text-danger text-decoration-line-through align-text-bottom">$150</span>
+                                        <span class="fw-semibold fs-5 ms-1">$130</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result2.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Julia Dens Resort</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-end position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <div class="details">
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="fw-semibold fs-5 ms-1">$240</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result3.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Aghnim Scepter Hotel</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-between position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <button class="btn btn-warning position-relative text-white text-nowrap px-2 py-0" style="margin-left: -45px;">Receive 30% discount on a restaurant</button>
+                                    <div class="details">
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="fw-semibold fs-5 ms-1">$300</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result4.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Marinefold Hotel</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-end position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <div class="details">
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="fw-semibold fs-5 ms-1">$120</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result5.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Shanghai Open House</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-end position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <div class="details">
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="fw-semibold fs-5 ms-1">$145</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result6.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Ocean Waves Resort</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-end position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <div class="details">
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="fw-semibold fs-5 ms-1">$310</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result7.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Maimi City frontier</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-between position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <button class="btn btn-warning position-relative text-white text-nowrap px-2 py-0" style="margin-left: -45px;">Receive 30% discount on a restaurant</button>
+                                    <div class="details">
+                                        <button class="btn btn-success px-2 py-0 mb-1">15% off</button>
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="text-danger text-decoration-line-through align-text-bottom">$200</span>
+                                        <span class="fw-semibold fs-5 ms-1">$190</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                            <div class="row align-items-center" style="height: 240px;">
+                                <div class="col-md-4 px-2 py-1">
+                                    <img src="images/search-result8.png" alt="" class="rounded" style="width: 285px;">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="fs-5 mt-2">Lakeside Motel Warefront</h3>
+                                    <div class="stars-reviews mb-3">
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                                    </div>
+                                    <p class="small fw-semibold mb-1">Live a little and celbrate with champagne</p>
+                                    <p class="small">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
+                                    <button class="btn btn-primary py-2 px-3">See availability</button>
+                                </div>
+                                <div class="col-md-3 p-0 d-flex flex-column justify-content-end position-relative text-end" style="margin-left: -20px; height: 100%;">
+                                    <div class="details">
+                                        <button class="btn btn-success px-2 py-0 mb-1">15% off</button>
+                                        <p class="mb-0">1 room 2 days</p>
+                                        <span class="text-danger text-decoration-line-through align-text-bottom">$320</span>
+                                        <span class="fw-semibold fs-5 ms-1">$300</span>
+                                        <p>Include taxes and fees</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="mx-auto mb-3 d-flex mt-5 rounded text-primary fw-semibold border-0 py-2 px-4" style="background-color: rgba(47, 128, 237, 0.1);">Load more results</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-md mt-4">
+        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+    </div>
+
+    <footer class="container-md mt-5">
+        <div class="row">
+            <div class="col-md-12 mt-3 d-flex gap-2 justify-content-between">
+                <div class="logo d-flex align-items-start">
+                    <img src="images/favicon.png" alt="" class="mt-2 me-1">
+                    <div class="text-content m-0 p-0">
+                        <p class="fw-semibold fs-5 m-0">my Dream Place</p>
+                        <p class="m-0 w-75 text-muted">Your next goto companion for travel</p>
+                    </div>
+                </div>
+                <div class="company">
+                    <p class="fw-semibold">Company</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Jobs</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Newsroom</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Advertising</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <p class="fw-semibold">Explore</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Australia</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">New Zealand</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">United Atated America (USA)</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Greece</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Maldives</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Singapore</a></li>
+                        <li><a href="#" class="text-decoration-none">See more</a></li>
+                    </ul>
+                </div>
+                <div class="terms-and-policies">
+                    <p class="fw-semibold">Terms and Policies</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms of use</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Reward system policy</a></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <p class="fw-semibold">Help</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Support</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Cancel your bookings</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Use Coupon</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Refund Policies</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">International Travel Documents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid mt-5 py-2 pe-5 d-flex copyright" style="background-color: rgba(235, 235, 235, 1);">
+        <p class="m-0 ms-auto me-5 pe-5 text-muted">&copy; my Dream Place 2026</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

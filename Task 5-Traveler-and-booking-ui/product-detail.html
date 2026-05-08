@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
+    <title>myDreamPlace | Home</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(244, 244, 244, 1);">
+
+    <nav class="navbar navbar-expand-lg fixed-top pt-3" style="background-color: white;">
+        <div class="container-md">
+            <div class="brand">
+                <img src="images/favicon.png" alt="">
+                <a href="#" class="navbar-brand ms-1">my Dream Place</a>
+            </div>
+            <button type="button"
+                class="navbar-toggler border-0"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-md-5" id="navbarNav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Discover</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Activites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+           
+            <a href="#"><img src="images/notif.png" alt=""></a>
+            <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown"><img src="images/profile-photo.png" class="rounded-5 ms-4" alt="" style="width: 44px; height: 44px; object-fit: cover;"></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item"><img src="images/profil-dropdown1.png" alt="" class="me-2 align-top">Manage account</a></li>
+                    <li><a href="mytrips.html" class="dropdown-item"><img src="images/profile-dropdown2.png" alt="" class="me-2 align-top">My trips</a></li>
+                    <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown3.png" alt="" class="me-2 align-top">Reward wallet</a></li>
+                    <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown4.png" alt="" class="me-2 align-top">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="product-images pt-5 mt-5" style="background: linear-gradient(to bottom, rgba(244, 244, 244, 0), rgba(255, 255, 255, 1));">
+        <div class="container-md">
+            <div class="row gx-3">
+                <div class="col-md-8">
+                    <img src="images/product-img1.png" alt="" class="img-fluid rounded w-100 object-fit-cover" style="height: 452px;">
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-between">
+                    <img src="images/product-img2.png" alt="" class="img-fluid rounded w-100 object-fit-cover" style="height: 218px;">
+                    <img src="images/product-img3.png" alt="" class="img-fluid rounded w-100 object-fit-cover" style="height: 218px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-details">
+        <div class="bg-white pt-3 border-bottom">
+            <div class="container-md">
+                <div class="d-inline-flex list-group list-group-horizontal list-group-flush rounded">
+                    <a href="#list-overview"
+                        class="active text-nowrap list-group-item list-group-item-action border-0"
+                        data-bs-toggle="list">
+                        Overview
+                    </a>
+                    <a href="#list-rooms"
+                        class="text-nowrap list-group-item list-group-item-action border-0"
+                        data-bs-toggle="list">
+                        Rooms
+                    </a>
+                    <a href="#list-guest-reviews"
+                        class="text-nowrap list-group-item list-group-item-action border-0"
+                        data-bs-toggle="list">
+                        Guest Reviews
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-md mt-5">
+            <div class="row gx-4">
+                <div class="col-md-8">
+                    <h3>Lakeside Motel Warefront</h3>
+                    <div class="stars-reviews mb-2">
+                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                        <i class="bi bi-star-fill" style="color: rgba(242, 153, 74, 1);"></i>
+                        <i class="bi bi-star-half" style="color: rgba(242, 153, 74, 1);"></i>
+                        <span class="ms-2">4.5 (1200 Reviews)</span>
+                    </div>
+                    <p><i class="bi bi-geo-alt me-2 text-primary fs-5"></i><span class="align-text-bottom">Lorem ipsum road, Tantruim-2322, Melbourne, Australia</span></p>
+                    <div class="tab-content bg-white rounded pt-3 pb-4 mt-4 mb-5">
+                        <div class="tab-pane fade show active" id="list-overview">
+                            <div class="px-4 border-bottom">
+                                <h5 class="mb-4">Overview</h5>
+                                <p class="text-secondary">Featuring free WiFi throughout the property, Lakeside Motel Waterfront offers accommodations in Lakes Entrance, 19 mi from Bairnsdale. Free private parking is available on site.</p>
+                                <p class="text-secondary">Each room at this motel is air conditioned and comes with a flat-screen TV. You will find a kettle, toaster and a microwave in the room. Each room is fitted with a private bathroom. Guests have access to barbecue facilities and a lovely large lawn area. Metung is 6.8 mi from Lakeside Motel Waterfront, while Paynesville is 14 mi from the property.</p>
+                                <p class="text-secondary mb-5">Couples in particular like the location - they rated it 9.2 for a two-person trip.</p>
+                            </div>
+                            <h5 class="mt-4 px-4 mb-4">Top facilities</h5>
+                            <div class="row px-4">
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-wifi-2"></i>Free wifi</li>
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-wind"></i>Air conditioning</li>
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-ev-front"></i>Parking available</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-briefcase"></i>Business Services</li>
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-0-circle"></i>Swimming pool</li>
+                                        <li class="mb-2"><i class="text-primary me-2 fs-5 align-text-middle bi bi-hand-thumbs-up"></i>Top rated in area</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="list-rooms">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum aliquid maxime voluptatibus nulla corporis ratione dolore, eligendi ullam. Nam aliquid inventore nostrum culpa quasi praesentium numquam, atque placeat voluptas quo deserunt iure blanditiis ipsum voluptatibus facilis similique obcaecati vel dicta enim quod ex. Maxime saepe quo optio earum, debitis ex!
+                        </div>
+                        <div class="tab-pane fade" id="list-guest-reviews">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus excepturi necessitatibus officia neque adipisci laboriosam numquam modi, non nesciunt incidunt nisi, cum eveniet rerum ut tempore illo, fugiat assumenda veritatis minima voluptatem pariatur. Non aliquam iste quibusdam, explicabo ea, pariatur alias expedita hic sint ipsum cumque minus velit odio eum neque! Veritatis aspernatur consequuntur possimus tenetur suscipit quaerat commodi exercitationem molestiae fugit quae ratione ullam officiis hic eius expedita laborum nemo in a ex cupiditate, dignissimos perspiciatis? Dolorum aspernatur blanditiis, doloremque reprehenderit nesciunt culpa, molestiae porro omnis autem ea sit corrupti eius non temporibus atque sapiente laborum nihil ipsam. Doloribus!
+                        </div>
+                    </div>
+                    <h4>Available rooms</h4>
+                    
+                </div>
+                <div class="col-md-4">
+                    <img src="images/maps.png" alt="" class="object-fit-cover w-100 rounded img-fluid" style="height: 240px;">
+                    <h5 class="my-4">Explore the area</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 d-flex justify-content-between">
+                            <span>
+                                <img src="images/dark-plane.png" alt="" class="me-1">
+                                <span>Hotel Penselvenyia</span>
+                            </span>
+                            <span>2 min drive</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between">
+                            <span>
+                                <img src="images/dark-location.png" alt="" class="me-1">
+                                <span>Travis Bakery store house</span>
+                            </span>
+                            <span>10 min drive</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between">
+                            <span>
+                                <img src="images/dark-location.png" alt="" class="me-1">
+                                <span>Olivia Johnson Garden</span>
+                            </span>
+                            <span>15 min drive</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between">
+                            <span>
+                                <img src="images/dark-location.png" alt="" class="me-1">
+                                <span>Norman Opera Circus</span>
+                            </span>
+                            <span>18 min drive</span>
+                        </li>
+                        <li class="mb-2 d-flex justify-content-between">
+                            <span>
+                                <img src="images/dark-location.png" alt="" class="me-1">
+                                <span>Rockdeset hotel</span>
+                            </span>
+                            <span>32 min drive</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <form class="mt-3 mb-4">
+                <div class="hstack gap-2 rounded p-2" style="background-color: #fff;">
+                    <div class="checkin-input position-relative" style="width: 320px;">
+                        <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" id="check-in" placeholder="Check in date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <div class="checkout-input position-relative" style="width: 320px;">
+                        <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" id="check-out" placeholder="Check out date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <div class="guest-input position-relative" style="width: 320px;">
+                        <i class="ms-3 bi bi-person position-absolute top-50" style="transform: translateY(-50%);"></i>
+                        <input type="text" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                    </div>
+                    <a href="search-results.html" type="submit" class="btn btn-primary" style="width: 320px;">Check availability</a href="search-results.html">
+                </div>
+            </form>
+            <div class="row gx-3 align-items-start">
+                <div class="col-md-4 rounded pt-4 pb-3 px-4 d-flex align-items-center" style="background: linear-gradient(to bottom, rgba(71, 150, 255, 1), rgba(35, 102, 191, 1));">
+                    <div class="text-content text-white w-50">
+                        <div class="mb-4">
+                            <img src="images/favicon-white.png" alt="">
+                            <span>my Dream Place</span>
+                        </div>
+                        <h4 class="m-0">20% off</h4>
+                        <h4 class="m-0">Use Promotional Coupon Code: <span class="text-warning">Orlando</span></h4>
+                    </div>
+                    <img src="images/person.png" alt="">
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/standard-twin-bed-1.png" alt="" class="card-img-top object-fit-cover" style="height: 200px;">
+                        <div class="card-body px-4">
+                            <h5>Standard twin ben, Multiple beds</h5>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="text-muted me-2 fs-5 align-text-middle bi bi-briefcase"></i>300 sq ft</li>
+                                <li class="mb-2"><i class="text-muted me-2 fs-5 align-text-middle bi bi-0-circle"></i>Sleeps 3</li>
+                                <li><i class="text-muted me-2 fs-5 align-text-middle bi bi-hand-thumbs-up"></i>1 double bed and 1 twin bed</li>
+                            </ul>
+                            <a href="checkout.html" class="btn btn-primary w-100 mb-2">Reserve suite</a href="checkout.html">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/standard-twin-bed-1.png" alt="" class="card-img-top object-fit-cover" style="height: 200px;">
+                        <div class="card-body px-4">
+                            <h5>Standard twin ben, Multiple beds</h5>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="text-muted me-2 fs-5 align-text-middle bi bi-briefcase"></i>300 sq ft</li>
+                                <li class="mb-2"><i class="text-muted me-2 fs-5 align-text-middle bi bi-0-circle"></i>Sleeps 3</li>
+                                <li><i class="text-muted me-2 fs-5 align-text-middle bi bi-hand-thumbs-up"></i>1 double bed and 1 twin bed</li>
+                            </ul>
+                            <a href="checkout.html" class="btn btn-primary w-100 mb-2">Reserve suite</a href="checkout.html">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-md mt-5 pt-5">
+        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+    </div>
+
+    <footer class="container-md mt-5 pt-4">
+        <div class="row">
+            <div class="col-md-12 mt-3 d-flex gap-2 justify-content-between">
+                <div class="logo d-flex align-items-start">
+                    <img src="images/favicon.png" alt="" class="mt-2 me-1">
+                    <div class="text-content m-0 p-0">
+                        <p class="fw-semibold fs-5 m-0">my Dream Place</p>
+                        <p class="m-0 w-75 text-muted">Your next goto companion for travel</p>
+                    </div>
+                </div>
+                <div class="company">
+                    <p class="fw-semibold">Company</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Jobs</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Newsroom</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Advertising</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="explore">
+                    <p class="fw-semibold">Explore</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Australia</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">New Zealand</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">United Atated America (USA)</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Greece</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Maldives</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Singapore</a></li>
+                        <li><a href="#" class="text-decoration-none">See more</a></li>
+                    </ul>
+                </div>
+                <div class="terms-and-policies">
+                    <p class="fw-semibold">Terms and Policies</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms of use</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Reward system policy</a></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <p class="fw-semibold">Help</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Support</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Cancel your bookings</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Use Coupon</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Refund Policies</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">International Travel Documents</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid mt-5 py-2 pe-5 d-flex copyright" style="background-color: rgba(235, 235, 235, 1);">
+        <p class="m-0 ms-auto me-5 pe-5 text-muted">&copy; my Dream Place 2026</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
