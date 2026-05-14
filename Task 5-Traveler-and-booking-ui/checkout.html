@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png">
     <title>myDreamPlace | Home</title>
@@ -16,7 +18,7 @@
 </head>
 <body style="background-color: rgba(244, 244, 244, 1);">
 
-    <nav class="navbar navbar-expand-lg fixed-top pt-3" style="background-color: white;">
+    <nav class="navbar navbar-expand-lg fixed-top py-3" style="background-color: white;">
         <div class="container-md">
             <div class="brand">
                 <img src="images/favicon.png" alt="">
@@ -41,7 +43,7 @@
    <section class="mt-5 pt-5">
     <div class="container-md pt-3 pb-5">
         <h3 class="mb-4">Secure your reservation</h3>
-        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+        <div class="alert alert-warning border-0 py-4"><i class="me-3 ms-2 bi bi-exclamation-triangle"></i>Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
         <div class="row mt-5 gx-4">
             <div class="col-md-8">
                 <div class="card border-0">
@@ -51,26 +53,20 @@
                         <span>2 adults, 1 double bed and 1 twin bed, Non-smoking</span>
                     </div>
                     <div class="card-body py-4 px-4">
-                        <form>
+                        <form id="checkout-form">
                             <div class="mb-4">
                                 <div class="d-inline-block" style="width: 240px;">
                                     <label for="first-name" class="mb-0 fw-semibold form-label">First name</label>
-                                    <input id="first-name" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                    <input id="first-name" required type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
                                 </div>
                                 <div class="d-inline-block ms-3" style="width: 240px;">
                                     <label for="last-name" class="mb-0 fw-semibold form-label">Last name</label>
-                                    <input id="last-name" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                    <input id="last-name" required type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <div class="d-inline-block" style="width: 150px;">
-                                    <label for="phone" class="mb-0 fw-semibold form-label">Mobile number</label>
-                                    <input id="phone" type="tel" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
-                                </div>
-                                <div class="d-inline-block ms-2" style="width: 338px;">
-                                    <label for="phone1" class="mb-0 fw-semibold form-label d-none"></label>
-                                    <input id="phone1" type="tel" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
-                                </div>
+                            <div class="mb-3" style="width: 240px;">
+                                <label for="countrycode" class="mb-0 d-block fw-semibold form-label">Mobile number</label>
+                                <input id="countrycode" required type="tel" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
                             </div>
                             <div class="form-check mb-3">
                                 <input type="checkbox" class="form-check-input fs-5 border-2" id="check">
@@ -120,41 +116,49 @@
                                         <img src="images/payment4.png" alt="" class="img-fluid object-fit-cover" style="width: 53px; height: 19px;">
                                     </div>
                                 </div>
-                                <form class="px-4 mb-4">
+                                <form id="payment-form" class="px-4 mb-4">
                                     <div class="d-inline-block mb-4" style="width: 500px;">
-                                        <label for="card-name" class="mb-0 fw-semibold form-label">Name on card</label>
-                                        <input id="card-name" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                        <label for="card-name" class="mb-0 fw-semibold form-label d-block">Name on card</label>
+                                        <div class="d-flex align-items-center">
+                                            <input id="card-name" required type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                            <img src="images/green-tick.png" alt="" class="d-none ms-3 img-fluid" style="height: 20px; width: 20px;">
+                                        </div>
                                     </div>
                                     <div class="d-inline-block mb-4" style="width: 500px;">
-                                        <label for="card-number" class="mb-0 fw-semibold form-label">Debit/Credit card number</label>
-                                        <input id="card-number" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                        <label for="card-number" class="mb-0 fw-semibold form-label d-block">Debit/Credit card number</label>
+                                        <div class="d-flex align-items-center">
+                                            <input id="card-number" required pattern="\d*" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                            <img src="images/green-tick.png" alt="" class="d-none ms-3 img-fluid" style="height: 20px; width: 20px;">
+                                        </div>
                                     </div>
                                     <div class="mb-4">
-                                        <div class="d-inline-block" style="width: 150px;">
+                                        <div class="d-inline-block" style="width: 240px;">
                                             <label for="date" class="mb-0 fw-semibold form-label">Expiration Date</label>
-                                            <input id="date" type="date" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
-                                        </div>
-                                        <div class="d-inline-block ms-2" style="width: 150px;">
-                                            <label for="date1" class="mb-0 fw-semibold form-label d-none"></label>
-                                            <input id="date1" type="date" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                            <div class="d-flex align-items-center">
+                                                <input id="date" type="date" required class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                                <img src="images/green-tick.png" alt="" class="d-none ms-3 img-fluid" style="height: 20px; width: 20px;">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="d-inline-block" style="width: 240px;">
                                             <label for="code" class="mb-0 fw-semibold form-label">Security code</label>
-                                            <input id="code" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                            <input id="code" required pattern="\d*" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
                                         </div>
                                         <div class="d-inline-block ms-3" style="width: 240px;">
                                             <label for="zip-code" class="mb-0 fw-semibold form-label">Billing Zip code</label>
-                                            <input id="zip-code" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                            <div class="d-flex align-items-center">
+                                                <input id="zip-code" required pattern="\d*" type="text" class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                                                <img src="images/green-tick.png" alt="" class="d-none ms-3 img-fluid" style="height: 20px; width: 20px;">
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="list-paypal">
+                            <div class="tab-pane fade px-4 my-4" id="list-paypal">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci officiis totam aut earum, quisquam amet accusantium animi asperiores dolor neque architecto optio excepturi cupiditate enim dicta quis dolores perspiciatis voluptas voluptatem voluptatum ipsum tempora porro. Velit debitis aperiam laboriosam magni illo, temporibus commodi, sunt excepturi corporis ad molestias vitae suscipit!
                             </div>
-                            <div class="tab-pane fade" id="list-bank-transfer">
+                            <div class="tab-pane fade px-4 my-4" id="list-bank-transfer">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci officiis totam aut earum, quisquam amet accusantium animi asperiores dolor neque architecto optio excepturi cupiditate enim dicta quis dolores perspiciatis voluptas voluptatem voluptatum ipsum tempora porro. Velit debitis aperiam laboriosam magni illo, temporibus commodi, sunt excepturi corporis ad molestias vitae suscipit!
                             </div>
                         </div>
@@ -170,7 +174,7 @@
                             <li>No refunds will be issued for late check-in or early check-out.</li>
                         </ol>
                         <p class="small ms-3 py-3">By clicking the button below, I acknowledge that I have reviewed the <span class="text-primary">Privacy Statement</span> and have reviewed and accept the <span class="text-primary">Rules and Restrictions</span> and <span class="text-primary">Terms of Use.</span></p>
-                        <button class="btn btn-primary ms-3 mb-4">Complete Booking</button>
+                        <button type="submit" id="completeBookingBtn" class="btn btn-primary ms-3 mb-4">Complete Booking</button>
                         <p class="ms-3">
                             <img src="images/checkout-icon3.png" alt="">
                             <span class="small">We use secure transmission and encrypted storage to protect your personal information</span>
@@ -234,12 +238,12 @@
     </div>
    </section>
     
-   <div class="overlay d-none w-100 position-fixed top-0" style="background-color: rgba(0, 0, 0, 0.8); height: 100vh; z-index:2000;">
+   <div id="bookingSuccessOverlay" class="d-none w-100 position-fixed top-0" style="background-color: rgba(0, 0, 0, 0.8); height: 100vh; z-index:2000;">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-6">
                 <div style="width: 400px; height: 500px;" class="px-4 bg-white mx-auto d-flex flex-column justify-content-center align-items-center rounded-4">
                     <div class="mx-auto mb-4 booking-success-img rounded-4" style="width: 240px; height: 200px; background: url(images/booking-success.png) center / 160px 160px no-repeat; background-color: rgba(111, 207, 151, 0.2);"></div>
-                    <legend class="text-center mt-2">Booking Successful</legend>
+                    <legend class="text-center mt-2 fw-semibold">Booking Successful</legend>
                     <p class="text-center text-muted mb-5 mt-3">Congratulations your reservation has been made. You will be notified 2 days prior the date.</p>
                     <a href="mytrips.html" class="btn btn-primary w-100">View Trip</a>
                 </div>
@@ -247,7 +251,10 @@
         </div>
    </div>
 
-   
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+   
 </body>
 </html>

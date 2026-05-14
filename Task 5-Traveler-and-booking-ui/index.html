@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="icon" href="images/favicon.png">
-    <title>myDreamPlace | Home</title>
+    <title>myDreamPlace</title>
     <style>
         body {
             overflow-x: hidden;
@@ -17,7 +17,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg fixed-top pt-3">
+    <nav class="navbar change-navbar-light navbar-expand-lg fixed-top py-4">
         <div class="container-md">
             <div class="brand">
                 <img src="images/favicon.png" alt="">
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto gap-md-5" id="navbarNav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="index.html" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Discover</a>
@@ -79,24 +79,24 @@
                     </div>
                     <div class="checkin-input position-relative" style="width: 170px;">
                         <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" id="check-in" placeholder="Check in date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="check-in" placeholder="Check in date" class="checkin-dates ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
                     <div class="checkout-input position-relative" style="width: 170px;">
                         <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" id="check-out" placeholder="Check out date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="check-out" placeholder="Check out date" class="checkout-dates ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
                     <div class="guest-input position-relative" style="width: 210px;">
                         <i class="ms-3 bi bi-person position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="guests" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
-                    <a href="search-results.html" type="submit" class="btn btn-primary" style="width: 148px;">Search</a>
+                    <button type="button" id="search" class="btn btn-primary" style="width: 148px;">Search</button>
                 </div>
             </form>
         </div>
     </section>
 
     <div class="container-md mt-4">
-        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+        <div class="alert alert-warning border-0 py-4"><i class="me-3 ms-2 bi bi-exclamation-triangle"></i>Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
     </div>
 
     <section class="plans mt-5 mb-5">
@@ -182,7 +182,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="content rounded overflow-hidden" style="height: 280px; background: url(images/download-mobile-app-1.jpg) center / cover;">
+                    <div class="content rounded overflow-hidden" style="height: 280px; background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/download-mobile-app-1.jpg) center / cover;">
                         <div class="row justify-content-center">
                             <div class="col-md-5 d-flex flex-column justify-content-center align-items-start text-white">
                                 <h4>Download the mobile application for bonus coupons and travel codes</h4>

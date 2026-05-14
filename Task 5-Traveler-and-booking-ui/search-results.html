@@ -17,11 +17,11 @@
 </head>
 <body>
     
-    <nav class="navbar bg-transparent navbar-expand-lg fixed-top pt-3 navbar-dark">
+    <nav class="navbar change-navbar-dark navbar-expand-lg fixed-top py-3 navbar-dark">
         <div class="container-md">
             <div class="brand">
                 <img src="images/favicon.png" alt="">
-                <a href="#" class="navbar-brand ms-1">my Dream Place</a>
+                <a href="home.html" class="navbar-brand ms-1">my Dream Place</a>
             </div>
             <button type="button"
                 class="navbar-toggler border-0"
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto gap-md-5" id="navbarNav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="home.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Discover</a>
@@ -56,7 +56,7 @@
                     <li><a href="#" class="dropdown-item"><img src="images/profil-dropdown1.png" alt="" class="me-2 align-top">Manage account</a></li>
                     <li><a href="mytrips.html" class="dropdown-item"><img src="images/profile-dropdown2.png" alt="" class="me-2 align-top">My trips</a></li>
                     <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown3.png" alt="" class="me-2 align-top">Reward wallet</a></li>
-                    <li><a href="#" class="dropdown-item"><img src="images/profile-dropdown4.png" alt="" class="me-2 align-top">Sign out</a></li>
+                    <li><a href="index.html" class="dropdown-item"><img src="images/profile-dropdown4.png" alt="" class="me-2 align-top">Sign out</a></li>
                 </ul>
             </div>
         </div>
@@ -68,8 +68,8 @@
                 <div class="hstack gap-2 mx-auto position-relative translate-middle-y rounded p-2 justify-content-center" style="box-shadow: 0 4px 37px 0 rgba(0, 0, 0, 0.15); width: 1010px; background-color: #fff;">
                     <div class="location-input position-relative" style="width: 260px;">
                         <i class="ms-3 bi bi-geo-alt position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" list="locations" placeholder="Where are you going?" class="ps-5 w-100 bg-body-secondary border-0 rounded py-2">
-                        <datalist id="locations">
+                        <input type="text" list="locations2" placeholder="Where are you going?" class="ps-5 w-100 bg-body-secondary border-0 rounded py-2">
+                        <datalist id="locations2">
                             <option value="New York">
                             <option value="London">
                             <option value="Tokyo">
@@ -78,17 +78,17 @@
                     </div>
                     <div class="checkin-input position-relative" style="width: 170px;">
                         <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" id="check-in" placeholder="Check in date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="check-in2" placeholder="Check in date" class="checkin-dates ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
                     <div class="checkout-input position-relative" style="width: 170px;">
                         <i class="ms-3 bi bi-calendar4-week position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" id="check-out" placeholder="Check out date" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="check-out2" placeholder="Check out date" class="checkout-dates ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
                     <div class="guest-input position-relative" style="width: 210px;">
                         <i class="ms-3 bi bi-person position-absolute top-50" style="transform: translateY(-50%);"></i>
-                        <input type="text" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
+                        <input type="text" id="guests2" placeholder="Guests" class="ps-5 bg-body-secondary border-0 rounded py-2 w-100">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 148px;">Search</button>
+                    <button id="search" type="button" class="second-search btn btn-primary" style="width: 148px;">Search</button>
                 </div>
             </form>
     </section>
@@ -142,9 +142,9 @@
                                     <span class="float-end">230</span>
                                 </label>
                             </li>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <p class="small text-muted ms-3 my-3">Set your own budget</p>
-                                <label class="theme-switch">
+                                <label class="theme-switch me-3 my-3">
                                     <!-- clicking anywhere on the label (including the slider) will toggle the checkbox automatically -->
                                     <input type="checkbox">
                                     <div class="slider round"></div>
@@ -278,22 +278,22 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h4 class="mb-4" style="color: black;">Melbourne: 2,582 search results found</h4>
+                    <h4 class="mb-4" style="color: black;"><span id="location-display"></span>2,582 search results found</h4>
                     <div class="list-sortby d-flex justify-content-between">
                         <ul class="list-group list-group-horizontal d-inline-flex">
-                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                            <a class="fw-semibold list-group-item border-primary active list-group-item-action text-nowrap" data-bs-toggle="list" href="#">
                                 Our top picks
                             </a>
-                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                            <a class="fw-semibold list-group-item border-primary list-group-item-action text-nowrap" data-bs-toggle="list" href="#">
                                 Hotel and apartments
                             </a>
-                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                            <a class="fw-semibold list-group-item border-primary list-group-item-action text-nowrap" data-bs-toggle="list" href="#">
                                 Residence
                             </a>
-                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                            <a class="fw-semibold list-group-item border-primary list-group-item-action text-nowrap" data-bs-toggle="list" href="#">
                                 Resort
                             </a>
-                            <a class="list-group-item list-group-item-action text-nowrap" href="#">
+                            <a class="fw-semibold list-group-item border-primary list-group-item-action text-nowrap" data-bs-toggle="list" href="#">
                                 Shared space
                             </a>
                         </ul>
@@ -310,8 +310,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="list-group my-4 gap-4">
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                    <div class="list-group my-4 gap-4" id="search-results-list">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result1.png" alt="" class="rounded" style="width: 285px;">
@@ -342,7 +342,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result2.png" alt="" class="rounded" style="width: 285px;">
@@ -370,7 +370,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result3.png" alt="" class="rounded" style="width: 285px;">
@@ -399,7 +399,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result4.png" alt="" class="rounded" style="width: 285px;">
@@ -427,7 +427,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result5.png" alt="" class="rounded" style="width: 285px;">
@@ -455,7 +455,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result6.png" alt="" class="rounded" style="width: 285px;">
@@ -483,7 +483,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result7.png" alt="" class="rounded" style="width: 285px;">
@@ -514,7 +514,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action border rounded">
+                        <a href="product-detail.html" class="list-group-item list-group-item-action border rounded">
                             <div class="row align-items-center" style="height: 240px;">
                                 <div class="col-md-4 px-2 py-1">
                                     <img src="images/search-result8.png" alt="" class="rounded" style="width: 285px;">
@@ -545,14 +545,14 @@
                             </div>
                         </a>
                     </div>
-                    <button class="mx-auto mb-3 d-flex mt-5 rounded text-primary fw-semibold border-0 py-2 px-4" style="background-color: rgba(47, 128, 237, 0.1);">Load more results</button>
+                    <button id="load-more-btn" class="mx-auto mb-3 d-flex mt-5 rounded text-primary fw-semibold border-0 py-2 px-4" style="background-color: rgba(47, 128, 237, 0.1);">Load more results</button>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="container-md mt-4">
-        <div class="alert alert-warning border-0 py-4">Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
+        <div class="alert alert-warning border-0 py-4"><i class="me-3 ms-2 bi bi-exclamation-triangle"></i>Check the latest COVID-19 restrictions before you travel. <a href="#" class="text-decoration-none">Learn more</a></div>
     </div>
 
     <footer class="container-md mt-5">
