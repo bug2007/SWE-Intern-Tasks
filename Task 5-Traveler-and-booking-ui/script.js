@@ -24,8 +24,8 @@ const completeBookingBtn = document.getElementById('completeBookingBtn');
 const checkOutForm = document.getElementById('checkout-form');
 const paymentForm = document.getElementById('payment-form');
 const countryCode = document.getElementById("countrycode");
-
-let passwordsMatched = false;
+const messageContainer = document.querySelector('.message-container');
+const message = document.getElementById('message');
 
 const savedEmail = localStorage.getItem('email');
 if (savedEmail && emailDisplay) {
@@ -120,17 +120,24 @@ sortbyArray.forEach(item => {
 
 function passwordsMatch() {
     if (password1El.value === password2El.value) {
-        passwordsMatched = true;
+        password1El.style.border = '1px solid green';
+        password2El.style.border = '1px solid green';
+        message.textContent = 'Successfully registered!';
+        message.style.color = 'green';
+        messageContainer.style.border = '2px solid green'; 
         return true;
     }
-    passwordsMatched = false;
+    password1El.style.border = '1px solid red';
+    password2El.style.border = '1px solid red';
+    message.textContent = 'Passwords do not match';
+    message.style.color = 'red';
+    messageContainer.style.border = '2px solid red'; 
     return false; 
 }    
 
 function handleForm(e) {
     e.preventDefault();
     const form = this;
-    // console.log('Form submitted:', form.id);
     if (form.id === 'sign-in') {
         window.location.href = 'home.html';
     } else if (form.id === 'register') {
@@ -138,8 +145,6 @@ function handleForm(e) {
     } else if (form.id === 'create-password') {
         if (passwordsMatch()) {
             window.location.href = 'home.html';
-        } else {
-            alert('Passwords do not match. Please try again.');
         }
     } else if (form.id === 'forgot-password') {
         localStorage.setItem('email', form.email.value.trim());

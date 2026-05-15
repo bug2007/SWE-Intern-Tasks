@@ -30,19 +30,23 @@
                 <form id="create-password" style="width: 400px;" class="mx-auto">
                     <fieldset>
                         <legend class="text-center fw-semibold">Create password</legend>
-                        <p class="text-center text-muted mb-4">Use a minimum of 10 characters, including letters, lowercase letters, and numbers.</p>
+                        <p class="text-center text-muted mb-4">Use a minimum of 10 characters, including uppercase, lowercase letters, and numbers.</p>
                         <div class="mb-3">
                             <label for="password1" class="form-label">Password</label>
-                            <input type="password" id="password1" required class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                            <input type="password" id="password1" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$" title="Minimum 10 characters, including uppercase, lowercase letters, and numbers." class="form-control" style="background-color: rgba(242, 242, 242, 1);">
                         </div>
                         <div class="mb-4">
                             <label for="password2" class="form-label">Confirm password</label>
-                            <input type="password" id="password2" required class="form-control border-0" style="background-color: rgba(242, 242, 242, 1);">
+                            <input type="password" id="password2" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$" title="Minimum 10 characters, including uppercase, lowercase letters, and numbers." class="form-control" style="background-color: rgba(242, 242, 242, 1);">
                         </div>
                         <button type="submit" class="py-2 btn btn-primary w-100">Create account</button>
                         <p class="text-muted mt-4" style="font-size: 14px;">By creating an account, you agree with our <span class="text-primary">Terms and Conditions</span> and <span class="text-primary">Privacy Statement.</span></p>
                     </fieldset>
                 </form>
+                <!-- error/success message -->
+                <div class="d-flex rounded mt-5 mx-auto message-container" style="width: 400px; height: 100px;">
+                    <h3 id="message" class="m-auto"></h3>
+                </div>
             </div>
         </div>
     </div>
