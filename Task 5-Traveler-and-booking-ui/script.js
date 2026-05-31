@@ -120,15 +120,15 @@ sortbyArray.forEach(item => {
 
 function passwordsMatch() {
     if (password1El.value === password2El.value) {
-        password1El.style.border = '1px solid green';
-        password2El.style.border = '1px solid green';
+        password1El.style.border = '2px solid green';
+        password2El.style.border = '2px solid green';
         message.textContent = 'Successfully registered!';
         message.style.color = 'green';
         messageContainer.style.border = '2px solid green'; 
         return true;
     }
-    password1El.style.border = '1px solid red';
-    password2El.style.border = '1px solid red';
+    password1El.style.border = '2px solid red';
+    password2El.style.border = '2px solid red';
     message.textContent = 'Passwords do not match';
     message.style.color = 'red';
     messageContainer.style.border = '2px solid red'; 
