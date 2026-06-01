@@ -4,9 +4,13 @@ import navbarIcon2 from '../assets/navbar-icon2.png';
 import navbarIcon3 from '../assets/navbar-icon3.png';
 import navbarIcon4 from '../assets/navbar-icon4.png';
 
-export default function Navbar() {
+export default function Navbar({scroll}) {
+    let cssClass = 'navbar';
+    if (scroll) {
+        cssClass += ' navbar-scroll'
+    }
     return (
-        <div className='navbar'>
+        <div className={cssClass}>
             <div className='navbar-logoBrand'>
                 <img src={logoImg} alt="Logo Image" />
                 <span>Furniro</span>
@@ -27,4 +31,4 @@ export default function Navbar() {
             </div>
         </div>
     )
-}
+} 
