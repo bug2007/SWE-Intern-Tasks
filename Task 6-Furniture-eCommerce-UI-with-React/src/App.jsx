@@ -2,13 +2,15 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Shop from "./components/Shop";
+import SingleProduct from "./components/SingleProduct";
 
 import { useSelector } from 'react-redux';
 
 
 const COMPONENTS = {
-  home: Home,
-  shop: Shop
+  Home,
+  Shop,
+  SingleProduct
 }
 
 function App() {

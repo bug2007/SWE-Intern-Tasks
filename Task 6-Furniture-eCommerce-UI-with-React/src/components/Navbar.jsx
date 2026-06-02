@@ -36,10 +36,10 @@ export default function Navbar() {
             </div>
             <div className='navbar-links'>
                 <ul>
-                    <li><a href="" onClick={(event) => handleLinkClick(event, 'home')}>Home</a></li>
-                    <li><a href="" onClick={(event) => handleLinkClick(event, 'shop')}>Shop</a></li>
-                    <li><a href="" onClick={(event) => handleLinkClick(event, 'about')}>About</a></li>
-                    <li><a href="" onClick={(event) => handleLinkClick(event, 'contact')}>Contact</a></li>
+                    <li><a href="" onClick={(event) => handleLinkClick(event, 'Home')}>Home</a></li>
+                    <li><a href="" onClick={(event) => handleLinkClick(event, 'Shop')}>Shop</a></li>
+                    <li><a href="" onClick={(event) => handleLinkClick(event, 'About')}>About</a></li>
+                    <li><a href="" onClick={(event) => handleLinkClick(event, 'Contact')}>Contact</a></li>
                 </ul>
             </div>
             <div className='navbar-icons'>

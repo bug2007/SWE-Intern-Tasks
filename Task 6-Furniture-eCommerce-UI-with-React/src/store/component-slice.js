@@ -5,10 +5,13 @@ import Shop from '../components/Shop';
 
 const componentSlice = createSlice({
     name: 'componentSlice',
-    initialState: { currentComponent: 'home' },
+    initialState: { currentComponent: 'Home', selectedProduct: null },
     reducers: {
         changePage(state, action) {
             state.currentComponent = action.payload;
+        },
+        selectProduct(state, action) {
+            state.selectedProduct = action.payload;
         }
     }
 })
