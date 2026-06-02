@@ -1,7 +1,7 @@
 import { PRODUCTS } from "../data"
 
 import Products from "./Products";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import filterImg from '../assets/filter.png';
 import gridImg from '../assets/grid.png';
 import listImg from '../assets/list.png';
