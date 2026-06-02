@@ -7,7 +7,7 @@ import DynamicBanner from "./components/DynamicBanner";
 import HomeBanner from "./components/HomeBanner";
 import BrowseRange from "./components/BrowseRange";
 import Products from "./components/Products";
-import ShopPage from "./components/ShopPage";
+import Shop from "./components/Shop";
 
 function App() {
   const [scroll, setScroll] = useState(false);
@@ -28,10 +28,10 @@ function App() {
       <Navbar scroll={scroll} />  
       {/* <HomeBanner /> */}
       {/* <BrowseRange /> */}
-      {/* <Products /> */}
-      <DynamicBanner title="Shop" />
-      <ShopPage />
-      <Features />
+      {/* <Products heading='Our Products' start={0} end={8} button /> */}
+      {/* <DynamicBanner title="Shop" /> */}
+      <Shop />
+      {/* <Features /> */}
       <Footer /> 
     </>
   )

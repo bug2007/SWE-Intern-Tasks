@@ -5,9 +5,6 @@ export default function ProductItem({product}) {
     let cssClass = 'image-card'
     if (product.discount) {
         currentPrice -= product.discount * currentPrice;
-    //     cssClass += ' discount'
-    // } else if (product.newComer) {
-    //     cssClass += ' newComer'
     }
 
 

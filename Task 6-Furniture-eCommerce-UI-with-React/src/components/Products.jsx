@@ -3,14 +3,14 @@ import { PRODUCTS } from "../data";
 import ProductItem from "./ProductItem";
 import Button from "./Button";
 
-export default function Products() {
+export default function Products({heading, start, end, button}) {
     return (
         <div className="our-products">
-            <p>Our Products</p>
+            {heading && <p>{heading}</p>}
             <div className="our-products-flex">
-                {PRODUCTS.map((product) =>  <ProductItem key={product.id} product={product} />)}
+                {PRODUCTS.slice(start, end).map((product) =>  <ProductItem key={product.id} product={product} />)}
             </div>
-            <Button type="second-type">Show More</Button>
+            {button && <Button type="second-type">Show More</Button>}
         </div>
     )
 }
