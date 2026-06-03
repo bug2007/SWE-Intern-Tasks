@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useState, useEffect, useRef } from "react";
 import arrowImg from '../assets/arrow.png';
 import formatPrice from "../data";
 import starImg from '../assets/star.png';
@@ -10,6 +10,8 @@ import twitterImg from '../assets/twitter-icon.png';
 import sofa1Img from '../assets/sofa1.png';
 import sofa2Img from '../assets/sofa2.png';
 import Products from "./Products";
+import { cartActions } from "../store/cart-slice";
+
 
 let para1 = <p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p>
 
@@ -24,6 +26,10 @@ stars.push(<img className="halfStar" src={halfStarImg} alt="Half Star" /> )
 export default function SingleProduct() {
     const [activeBtn, setActiveBtn] = useState('L');
     const [activeTab, setActiveTab] = useState(1);
+    const [chooseQuantity, setChooseQuantity] = useState(1);
+    const dispatch = useDispatch();
+
+    const cart = useSelector(state => state.cart);
 
     const product = useSelector(state => state.component.selectedProduct)
     const listedImages = [];
@@ -46,7 +52,22 @@ export default function SingleProduct() {
         </>)
     }
 
-    
+    function handleIncreaseChooseQuantity() {
+        setChooseQuantity(prevState => prevState + 1)
+    }
+
+    function handleDecreaseChooseQuantity() {
+        setChooseQuantity(prevState => prevState > 1 ? prevState - 1 : prevState)
+    }
+
+    function addProdToCart() {
+        dispatch(cartActions.addToCart({id: product.id, title: product.title, quantity: chooseQuantity, price: product.currentPrice}))
+    }
+
+    // useEffect(() => {
+    //     console.log(cart.products, cart.bigTotal)
+    // }, [cart.products])
+     
     return (
         <div className="singleProduct">
             <div className="singleProduct-direction">
@@ -87,9 +108,9 @@ export default function SingleProduct() {
                     </div>
                     <div className="amountCartCompare-buttons">
                         <span className="add-quantity">
-                            <button>-</button>1<button>+</button>
+                            <button onClick={handleDecreaseChooseQuantity}>-</button>{chooseQuantity}<button onClick={handleIncreaseChooseQuantity}>+</button>
                         </span>
-                        <button>Add To Cart</button>
+                        <button onClick={addProdToCart}>Add To Cart</button>
                         <button>+ Compare</button>
                     </div>
                     <hr />
@@ -125,5 +146,3 @@ export default function SingleProduct() {
         </div>
     )
 }
-
-// ///////////////////

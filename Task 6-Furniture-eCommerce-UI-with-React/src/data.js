@@ -75,7 +75,7 @@ export const PRODUCTS = [
     
     {
         id: 'p9',
-        title: 'Syltherine',
+        title: 'Syltherine1',
         subtitle: 'Stylish cafe chair',
         imgSrc: syltherineImg, 
         originalPrice: 3500,
@@ -83,14 +83,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p10',
-        title: 'Leviosa',
+        title: 'Leviosa1',
         subtitle: 'Stylish cafe chair',
         imgSrc: leviosaImg, 
         originalPrice: 2500
     },
     {
         id: 'p11',
-        title: 'Lolito',
+        title: 'Lolito1',
         subtitle: 'Luxury big sofa',
         imgSrc: lolitoImg, 
         originalPrice: 14000,
@@ -98,7 +98,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p12',
-        title: 'Respira',
+        title: 'Respira1',
         subtitle: 'Outdoor bar table and stool',
         imgSrc: respiraImg, 
         originalPrice: 500,
@@ -106,14 +106,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p13',
-        title: 'Grifo',
+        title: 'Grifo1',
         subtitle: 'Night lamp',
         imgSrc: grifoImg, 
         originalPrice: 1500
     },
     {
         id: 'p14',
-        title: 'Muggo',
+        title: 'Muggo1',
         subtitle: 'Small mug',
         imgSrc: muggoImg, 
         originalPrice: 150,
@@ -121,7 +121,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p15',
-        title: 'Pingky',
+        title: 'Pingky1',
         subtitle: 'Cute bed set',
         imgSrc: pingkyImg, 
         originalPrice: 14000,
@@ -129,7 +129,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p16',
-        title: 'Potty',
+        title: 'Potty1',
         subtitle: 'Minimalist flower pot',
         imgSrc: pottyImg, 
         originalPrice: 500,
@@ -137,7 +137,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p17',
-        title: 'Syltherine',
+        title: 'Syltherine2',
         subtitle: 'Stylish cafe chair',
         imgSrc: syltherineImg, 
         originalPrice: 3500,
@@ -145,14 +145,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p18',
-        title: 'Leviosa',
+        title: 'Leviosa2',
         subtitle: 'Stylish cafe chair',
         imgSrc: leviosaImg, 
         originalPrice: 2500
     },
     {
         id: 'p19',
-        title: 'Lolito',
+        title: 'Lolito2',
         subtitle: 'Luxury big sofa',
         imgSrc: lolitoImg, 
         originalPrice: 14000,
@@ -160,7 +160,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p20',
-        title: 'Respira',
+        title: 'Respira2',
         subtitle: 'Outdoor bar table and stool',
         imgSrc: respiraImg, 
         originalPrice: 500,
@@ -168,14 +168,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p21',
-        title: 'Grifo',
+        title: 'Grifo2',
         subtitle: 'Night lamp',
         imgSrc: grifoImg, 
         originalPrice: 1500
     },
     {
         id: 'p22',
-        title: 'Muggo',
+        title: 'Muggo2',
         subtitle: 'Small mug',
         imgSrc: muggoImg, 
         originalPrice: 150,
@@ -183,7 +183,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p23',
-        title: 'Pingky',
+        title: 'Pingky2',
         subtitle: 'Cute bed set',
         imgSrc: pingkyImg, 
         originalPrice: 14000,
@@ -191,7 +191,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p24',
-        title: 'Potty',
+        title: 'Potty2',
         subtitle: 'Minimalist flower pot',
         imgSrc: pottyImg, 
         originalPrice: 500,
@@ -200,7 +200,7 @@ export const PRODUCTS = [
 
     {
         id: 'p25',
-        title: 'Syltherine',
+        title: 'Syltherine3',
         subtitle: 'Stylish cafe chair',
         imgSrc: syltherineImg, 
         originalPrice: 3500,
@@ -208,14 +208,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p26',
-        title: 'Leviosa',
+        title: 'Leviosa3',
         subtitle: 'Stylish cafe chair',
         imgSrc: leviosaImg, 
         originalPrice: 2500
     },
     {
         id: 'p27',
-        title: 'Lolito',
+        title: 'Lolito3',
         subtitle: 'Luxury big sofa',
         imgSrc: lolitoImg, 
         originalPrice: 14000,
@@ -223,7 +223,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p28',
-        title: 'Respira',
+        title: 'Respira3',
         subtitle: 'Outdoor bar table and stool',
         imgSrc: respiraImg, 
         originalPrice: 500,
@@ -231,14 +231,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p29',
-        title: 'Grifo',
+        title: 'Grifo3',
         subtitle: 'Night lamp',
         imgSrc: grifoImg, 
         originalPrice: 1500
     },
     {
         id: 'p30',
-        title: 'Muggo',
+        title: 'Muggo3',
         subtitle: 'Small mug',
         imgSrc: muggoImg, 
         originalPrice: 150,
@@ -246,7 +246,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p31',
-        title: 'Pingky',
+        title: 'Pingky3',
         subtitle: 'Cute bed set',
         imgSrc: pingkyImg, 
         originalPrice: 14000,
@@ -254,7 +254,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p32',
-        title: 'Potty',
+        title: 'Potty3',
         subtitle: 'Minimalist flower pot',
         imgSrc: pottyImg, 
         originalPrice: 500,
@@ -263,7 +263,7 @@ export const PRODUCTS = [
 
     {
         id: 'p33',
-        title: 'Syltherine',
+        title: 'Syltherine4',
         subtitle: 'Stylish cafe chair',
         imgSrc: syltherineImg, 
         originalPrice: 3500,
@@ -271,14 +271,14 @@ export const PRODUCTS = [
     },
     {
         id: 'p34',
-        title: 'Leviosa',
+        title: 'Leviosa4',
         subtitle: 'Stylish cafe chair',
         imgSrc: leviosaImg, 
         originalPrice: 2500
     },
     {
         id: 'p35',
-        title: 'Lolito',
+        title: 'Lolito4',
         subtitle: 'Luxury big sofa',
         imgSrc: lolitoImg, 
         originalPrice: 14000,
@@ -286,7 +286,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p36',
-        title: 'Respira',
+        title: 'Respira4',
         subtitle: 'Outdoor bar table and stool',
         imgSrc: respiraImg, 
         originalPrice: 500,
@@ -294,7 +294,7 @@ export const PRODUCTS = [
     },
     {
         id: 'p37',
-        title: 'Grifo',
+        title: 'Grifo4',
         subtitle: 'Night lamp',
         imgSrc: grifoImg, 
         originalPrice: 1500

@@ -724,3 +724,21 @@ button {
   color: black;
   margin: 2.5rem 0 1.5rem 0;
 }
+
+/* Cart sidebar */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 200;
+}
+
+.cartSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  z-index: 201;
+}
