@@ -6,7 +6,7 @@ import Button from "./Button";
 export default function Products({heading, start, end, button}) {
     return (
         <div className="our-products">
-            {heading && <p>{heading}</p>}
+            {heading && <p className="heading">{heading}</p>}
             <div className="our-products-flex">
                 {PRODUCTS.slice(start, end).map((product) =>  <ProductItem key={product.id} product={product} />)}
             </div>
