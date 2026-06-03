@@ -12,7 +12,7 @@ import CartSidebar from './CartSidebar';
 
 export default function Navbar() {
     const [scroll, setScroll] = useState(false);
-    const showCartSidebar = useSelector(state => state.cart.showCartSidebar)
+    const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -53,7 +53,7 @@ export default function Navbar() {
                     <a href="" onClick={(event) => { event.preventDefault(); dispatch(cartActions.openCartSidebar())}}><img src={navbarIcon4} alt="Shopping Cart" /></a>
                 </div>
             </div>
-            {showCartSidebar && <CartSidebar />}
+            {cart.showCartSidebar && <CartSidebar products={cart.products} bigTotal={cart.bigTotal} />}
         </>
     )
 } 

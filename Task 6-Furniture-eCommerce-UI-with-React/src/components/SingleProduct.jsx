@@ -61,7 +61,7 @@ export default function SingleProduct() {
     }
 
     function addProdToCart() {
-        dispatch(cartActions.addToCart({id: product.id, title: product.title, quantity: chooseQuantity, price: product.currentPrice}))
+        dispatch(cartActions.addToCart({id: product.id, title: product.title, quantity: chooseQuantity, price: product.currentPrice, imgSrc: product.imgSrc}))
     }
 
     // useEffect(() => {

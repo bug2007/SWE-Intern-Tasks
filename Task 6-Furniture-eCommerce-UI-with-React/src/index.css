@@ -729,7 +729,7 @@ button {
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 200;
 }
 
@@ -737,8 +737,27 @@ button {
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
-  height: 100vh;
+  width: 417px;
+  height: 746px;
   background: white;
   z-index: 201;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 105px;
+    height: 105px;
+    border-radius: 10px;
+  }
+  hr {
+    border: none;
+    background-color: rgba(217, 217, 217, 1);
+    height: 1px;
+    width: 287px;
+    margin: 0;
+  }
+}
+
+.itemList {
+  flex: 1;
+  overflow-y: auto;
 }
