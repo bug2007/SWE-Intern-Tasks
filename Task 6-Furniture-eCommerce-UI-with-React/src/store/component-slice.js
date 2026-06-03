@@ -19,17 +19,3 @@ const componentSlice = createSlice({
 export const componentSliceActions = componentSlice.actions;
 export default componentSlice;
 
-// import { useSelector } from 'react-redux';
-// import { COMPONENTS } from './yourSliceFile';
-
-// function AppDisplay() {
-//     const pageKey = useSelector((state) => state.componentSlice.currentPage);
-    
-//     const SelectedComponent = COMPONENTS[pageKey];
-
-//     return (
-//         <div>
-//             <SelectedComponent />
-//         </div>
-//     );
-// }

@@ -12,7 +12,7 @@ export default function ProductItem({product}) {
     }
 
     function handleSelectProduct() {
-        dispatch(componentSliceActions.selectProduct(product))
+        dispatch(componentSliceActions.selectProduct({...product, currentPrice}))
         dispatch(componentSliceActions.changePage('SingleProduct'))
     }
 
