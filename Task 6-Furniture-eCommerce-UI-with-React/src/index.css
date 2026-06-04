@@ -204,7 +204,7 @@ footer {
   position: absolute;
   inset: 0;  /* top; 0, left: 0, right: 0, bottom: 0 */
   background: url('./assets/common-banner-bg.jpg') center / cover no-repeat;
-  filter: blur(2px);
+  filter: blur(3px);
   z-index: -2;
 }
 
@@ -212,7 +212,7 @@ footer {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   z-index: -1;
 }
 
@@ -973,4 +973,18 @@ tbody tr td:nth-child(4) > span {
 .no-item-text {
   font-size: 32px;
   font-weight: 600;
+}
+
+/* Checkout */
+.checkoutContainer form {
+  display: flex;
+  justify-content: center;
+}
+
+.firstColumn {
+  > p{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
 }
