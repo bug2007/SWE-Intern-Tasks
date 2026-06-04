@@ -24,7 +24,7 @@ const cartSlice = createSlice({
         },  
         removeFromCart(state, action) {
             const id = action.payload.id;
-            const deleteQuantity = action.payload;
+            const deleteQuantity = action.payload.quantity;
             const existingProd = state.products.find(product => product.id === id);
             if ((deleteQuantity === 'full') || (deleteQuantity === 'one' && existingProd.quantity === 1)) {
                 state.bigTotal -= existingProd.totalPrice;

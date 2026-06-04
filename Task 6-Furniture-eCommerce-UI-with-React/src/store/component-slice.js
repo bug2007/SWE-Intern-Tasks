@@ -1,8 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import Home from '../components/Home';
-import Shop from '../components/Shop';
-
 const componentSlice = createSlice({
     name: 'componentSlice',
     initialState: { currentComponent: 'Home', selectedProduct: null },

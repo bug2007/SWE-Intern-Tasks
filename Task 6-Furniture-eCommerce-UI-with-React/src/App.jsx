@@ -1,6 +1,9 @@
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import ProductComparison from "./components/ProductComparison";
 import Shop from "./components/Shop";
 import SingleProduct from "./components/SingleProduct";
 
@@ -10,7 +13,10 @@ import { useSelector } from 'react-redux';
 const COMPONENTS = {
   Home,
   Shop,
-  SingleProduct
+  SingleProduct,
+  ProductComparison,
+  Cart,
+  Checkout
 }
 
 function App() {

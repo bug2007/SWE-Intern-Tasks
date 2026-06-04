@@ -2,7 +2,7 @@ import formatPrice from "../data";
 import { useDispatch } from 'react-redux';
 import { componentSliceActions } from "../store/component-slice";
 
-export default function ProductItem({product}) {
+export default function ProductItem({product, onSelect}) {
     const dispatch = useDispatch();
     
     let currentPrice = product.originalPrice;
