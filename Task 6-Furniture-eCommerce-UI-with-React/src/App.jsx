@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import ProductComparison from "./components/ProductComparison";
 import Shop from "./components/Shop";
 import SingleProduct from "./components/SingleProduct";
+import Contact from "./components/Contact";
 
 import { useSelector } from 'react-redux';
 
@@ -16,7 +17,8 @@ const COMPONENTS = {
   SingleProduct,
   ProductComparison,
   Cart,
-  Checkout
+  Checkout,
+  Contact
 }
 
 function App() {

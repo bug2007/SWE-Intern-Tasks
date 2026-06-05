@@ -1006,7 +1006,7 @@ tbody tr td:nth-child(4) > span {
     height: 75px;
     outline: none;
     font-size: 16px;
-    /* padding: 0 20px 0; */
+    font-family: 'Poppins', sans-serif;
     width: 453px;
   }
 
@@ -1126,4 +1126,104 @@ button[disabled] {
   text-align: center;
   font-weight: 500;
   font-size: 32px;
+}
+
+/* Contact */
+.contactContainer {
+  padding: 98px 3rem 63px;
+  p {
+    margin: 0;
+  }
+  .heading {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .heading-2 {
+    color: rgba(159, 159, 159, 1);
+    text-align: center;
+  }
+}
+
+.details-form {
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+  margin-top: 128px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.address-content, .phone-content, .workingTime-content {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  p:nth-of-type(1) {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.details-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 36px;
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+  input, textarea {
+    width: 528.75px;
+    border-radius: 10px;
+    border: 1px solid rgba(159, 159, 159, 1);
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    padding: 26px 0 26px 29px;
+  }
+}
+
+.contactBtn {
+  margin-top: 13px;
+  border-radius: 5px;
+  background-color: rgba(184, 142, 47, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  padding: 13.75px 89px;
+  &:hover {
+    filter: brightness(110%);
+  }
+}
+
+dialog {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 30vw;
+  height: 20vh;
+  p {
+    font-size: 24px;
+  }
+  button {
+    background: rgba(184, 142, 47, 1);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 25px;
+    border: none;
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+}
+
+/* only apply this when the modal is actually open. by default, it is display: block, so have to carefully set display: flex */
+dialog:modal { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
