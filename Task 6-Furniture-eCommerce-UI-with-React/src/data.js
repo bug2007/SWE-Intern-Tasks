@@ -16,7 +16,7 @@ export const PRODUCTS = [
         subtitle: 'Stylish cafe chair',
         imgSrc: syltherineImg, 
         originalPrice: 3500,
-        discount: 0.3,
+        discount: 0.3
     },
     {
         id: 'p2',

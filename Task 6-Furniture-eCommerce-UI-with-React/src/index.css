@@ -1227,3 +1227,19 @@ dialog:modal {
   justify-content: center;
   align-items: center;
 }
+
+/* Blog */
+.blogContainer {
+  padding: 106px 100px 58px;
+  display: flex;
+  justify-content: center;
+  gap: 71px;
+}
+
+.blogPosts {
+  max-width: 820px;
+}
+
+.recentPosts li {
+  cursor: pointer;
+}

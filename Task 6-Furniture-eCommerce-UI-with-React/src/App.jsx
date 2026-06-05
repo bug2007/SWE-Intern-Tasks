@@ -7,6 +7,7 @@ import ProductComparison from "./components/ProductComparison";
 import Shop from "./components/Shop";
 import SingleProduct from "./components/SingleProduct";
 import Contact from "./components/Contact";
+import Blog from "./components/Blog";
 
 import { useSelector } from 'react-redux';
 
@@ -18,7 +19,8 @@ const COMPONENTS = {
   ProductComparison,
   Cart,
   Checkout,
-  Contact
+  Contact,
+  Blog
 }
 
 function App() {

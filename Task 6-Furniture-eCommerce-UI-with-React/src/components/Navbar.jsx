@@ -42,7 +42,7 @@ export default function Navbar() {
                     <ul>
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Home')}>Home</a></li>
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Shop')}>Shop</a></li>
-                        <li><a href="" onClick={(event) => handleLinkClick(event, 'About')}>About</a></li>
+                        <li><a href="" onClick={(event) => handleLinkClick(event, 'Blog')}>About</a></li>
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Contact')}>Contact</a></li>
                     </ul>
                 </div>
