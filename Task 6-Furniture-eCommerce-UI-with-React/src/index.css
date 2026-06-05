@@ -976,15 +976,154 @@ tbody tr td:nth-child(4) > span {
 }
 
 /* Checkout */
-.checkoutContainer form {
-  display: flex;
-  justify-content: center;
+.checkoutContainer {
+  padding: 4rem 3rem 5.5rem;
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 8rem;
+  }
 }
 
 .firstColumn {
   > p{
     font-size: 36px;
     font-weight: 600;
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
   }
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  > div:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  input, select {
+    border-radius: 10px;
+    border: 1px solid rgba(159, 159, 159, 1);
+    height: 75px;
+    outline: none;
+    font-size: 16px;
+    /* padding: 0 20px 0; */
+    width: 453px;
+  }
+
+  select {
+    padding: 0 23px;
+    color: rgba(159, 159, 159, 1);
+  }
+}
+
+.names {
+  display: flex;
+  gap: 28px;
+}
+
+#first-name, #last-name {
+  width: 211px;
+}
+
+.secondColumn {
+  width: 533px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  .heading, .product, .checkout-subtotal, .checkout-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .heading {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .product > span {
+    &:first-child {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    &:first-child span {
+      &:first-child {
+        color: rgba(159, 159, 159, 1);
+      }
+      &:nth-child(2), &:last-child {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+    &:last-child {
+      font-weight: 300;
+    }
+  }
+  .checkout-subtotal span:last-child {
+    font-weight: 300;
+  }
+  .checkout-total {
+    margin-bottom: 0;
+    span:last-child {
+      font-weight: 700;
+      font-size: 24px;
+      color: rgba(184, 142, 47, 1);
+    }
+  }
+}
+
+.checkout-hr {
+  border: none;
+  background-color: rgba(217, 217, 217, 1);
+  height: 1px;
+  margin: 30px 0 20px;
+}
+
+.paymentMethod-heading {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+}
+
+.radio-buttons {
+  .radio-bank, .radio-cash {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  input {
+    margin-right: 10px;
+  }
+}
+
+.orderBtn {
+  width: 318px;
+  height: 64px;
+  border-radius: 15px;
+  margin-top: 30px;
+  background: transparent;
+  font-size: 20px;
+  align-self: center;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+.successMsg {
+  border: 2px solid green;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 3rem;
+  width: 318px;
+  align-self: center;
+  color: green;
+  font-weight: 500;
+}
+
+.noItemMsg {
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
 }

@@ -40,6 +40,10 @@ const cartSlice = createSlice({
         },
         closeCartSidebar(state) {
             state.showCartSidebar = false
+        },
+        clearCart(state) {
+           state.products = [];
+           state.bigTotal = 0; 
         }
     }
 })
