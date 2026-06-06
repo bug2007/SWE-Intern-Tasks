@@ -1,84 +1,85 @@
 import DynamicBanner from "./DynamicBanner";
 import Features from "./Features";
 import BlogPost from "./BlogPost";
-import blogImg1 from '../assets/blog1.png';
-import blogImg2 from '../assets/blog2.png';
-import blogImg3 from '../assets/blog3.png';
-import postImg1 from '../assets/post1.png';
-import postImg2 from '../assets/post2.png';
-import postImg3 from '../assets/post3.png';
-import postImg4 from '../assets/post4.png';
-import postImg5 from '../assets/post5.png';
+import { useState } from "react";
+import searchBarImg from '../assets/navbar-icon2.png';
 
+import { RECENT_POSTS, BLOG_POSTS } from "../data";
 
-const RECENT_POSTS = [
-    {
-        id: 'post1',
-        imgSrc: postImg1,
-        title: 'Going all-in with millennial design'
-    },
-    {
-        id: 'post2',
-        imgSrc: postImg2,
-        title: 'Exploring new ways of decorating'
-    },
-    {
-        id: 'post3',
-        imgSrc: postImg3,
-        title: 'Handmade pieces that took time to make'
-    },
-    {
-        id: 'post4',
-        imgSrc: postImg4,
-        title: 'Modern home in Milan'
-    },
-    {
-        id: 'post5',
-        imgSrc: postImg5,
-        title: 'Colorful office redesign'
-    }
-];
+const TOTAL_BLOG_POSTS= BLOG_POSTS.length; // 8
+const TOTAL_BUTTONS = Math.ceil(TOTAL_BLOG_POSTS / 3);  // 3 buttons
+const LAST_BLOG_POSTS = TOTAL_BLOG_POSTS % 3; // 2 last blog posts
+
+let start = 0;
+let end = 3;
 
 export default function Blog() {
+    const [activeBtn, setActiveBtn] = useState(1);
+    const [showPost, setShowPost] = useState(null);
+
+    let buttons = [];
+    for (let i = 1; i <= TOTAL_BUTTONS; i++) {
+        buttons.push(<button className={i==activeBtn ? 'active' : ''} onClick={() => handleButtonClick(i)} key={i}>{i}</button>)
+    }
+
+    function handleButtonClick(page) {
+        start = (page-1) * 3;
+        end = page === TOTAL_BUTTONS ? start + LAST_BLOG_POSTS : page * 3
+        setActiveBtn(page)
+        setShowPost(null)
+    }
+
+    function handlePostClick(imgSrc, title, pin) {
+        setShowPost({imgSrc, title, pin});
+    }
+
     return (
         <>
         <DynamicBanner title="Blog" />
         <div className="blogContainer">
-            <div className="blogPosts">
-                <BlogPost title="Going all-in with millennial design" pin="Wood" imgSrc={blogImg1} />
-                <BlogPost title="Going all-in with millennial design" pin="Wood" imgSrc={blogImg2} />
-                <BlogPost title="Going all-in with millennial design" pin="Wood" imgSrc={blogImg3} />
-            </div>
-            <div className="category-recentPosts">
-                <div className="category">
+            <div className="blog-category-recentPosts">
+                <div className="blogPosts">
+                    {!showPost && BLOG_POSTS.slice(start, end).map((blogPost) =>
+                        <BlogPost title={blogPost.title} pin={blogPost.pin} imgSrc={blogPost.imgSrc} postDate='06 Jun 2026 ' />)
+                    }
+                    {showPost && <BlogPost title={showPost.title} pin={showPost.pin} imgSrc={showPost.imgSrc} postDate='03 Jun 2026' />}
+                </div>
+                <div className="category-recentPosts">
                     <div className="searchBar">
                         <input type="text" />
+                        <img src={searchBarImg} alt="Search Icon" />
                     </div>
-                    <div className="categories">
-                        <p>Categories</p>
-                        <ul>
-                            <li><span>Crafts</span><span>2</span></li>
-                            <li><span>Design</span><span>8</span></li>
-                            <li><span>Handmade</span><span>7</span></li>
-                            <li><span>Interior</span><span>1</span></li>
-                            <li><span>Wood</span><span>6</span></li>
-                        </ul>
-                    </div>
-                    <div className="recentPosts">
-                        <p>Recent Posts</p>
-                        <ul>
-                        {RECENT_POSTS.map((recentPost) =>
-                            <li key={recentPost.id}>
-                                <img src={recentPost.imgSrc} alt={recentPost.title} />
-                                <div>
-                                    <p>{recentPost.title}</p>
-                                    <p>03 Aug 2022</p>
-                                </div>
-                            </li>
-                        )}
-                        </ul>
+                    <div className="category">
+                        <div className="categories">
+                            <p>Categories</p>
+                            <ul>
+                                <li><span>Crafts</span><span>2</span></li>
+                                <li><span>Design</span><span>8</span></li>
+                                <li><span>Handmade</span><span>7</span></li>
+                                <li><span>Interior</span><span>1</span></li>
+                                <li><span>Wood</span><span>6</span></li>
+                            </ul>
+                        </div>
+                        <div className="recentPosts">
+                            <p>Recent Posts</p>
+                            <ul>
+                            {RECENT_POSTS.map((recentPost) =>
+                                <li key={recentPost.id} onClick={() => handlePostClick(recentPost.imgSrc, recentPost.title, recentPost.pin)}>
+                                    <img src={recentPost.imgSrc} alt={recentPost.title} />
+                                    <div>
+                                        <p>{recentPost.title}</p>
+                                        <span>03 Jun 2026</span>
+                                    </div>
+                                </li>
+                            )}
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div className="page-buttons">
+                {buttons}
+                <button onClick={() => {activeBtn < 3 && handleButtonClick(activeBtn + 1)}}>Next</button>
             </div>
         </div>
         <Features />

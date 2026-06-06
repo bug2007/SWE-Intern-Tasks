@@ -7,6 +7,22 @@ import muggoImg from './assets/muggo.png';
 import pingkyImg from './assets/pingky.jpg';
 import pottyImg from './assets/potty.jpg';
 
+
+import postImg1 from './assets/post1.jpg';
+import postImg2 from './assets/post2.jpg';
+import postImg3 from './assets/post3.jpg';
+import postImg4 from './assets/post4.jpg';
+import postImg5 from './assets/post5.jpg';
+import blogImg1 from './assets/blog1.jpg';
+import blogImg2 from './assets/blog2.jpg';
+import blogImg3 from './assets/blog3.jpg';
+import blogImg4 from './assets/blog4.jpg';
+import blogImg5 from './assets/blog5.jpg';
+import blogImg6 from './assets/blog6.jpg';
+import blogImg7 from './assets/blog7.jpg';
+import blogImg8 from './assets/blog8.jpg';
+
+
 const newComer = 'New';
 
 export const PRODUCTS = [
@@ -300,6 +316,90 @@ export const PRODUCTS = [
         originalPrice: 1500
     },
 
+]
+
+export const RECENT_POSTS = [
+    {
+        id: 'post1',
+        imgSrc: postImg1,
+        title: 'Going all-in with millennial design',
+        pin: 'Wood',
+    },
+    {
+        id: 'post2',
+        imgSrc: postImg2,
+        title: 'Exploring new ways of decorating',
+        pin: 'Handmade',
+    },
+    {
+        id: 'post3',
+        imgSrc: postImg3,
+        title: 'Handmade pieces that took time to make', 
+        pin: 'Handmade'
+    },
+    {
+        id: 'post4',
+        imgSrc: postImg4,
+        title: 'Modern home in Milan',
+        pin: 'Wood'
+    },
+    {
+        id: 'post5',
+        imgSrc: postImg5,
+        title: 'Colorful office redesign',
+        pin: 'Handmade'
+    }
+];
+
+export const BLOG_POSTS =[
+    {
+        id: 'blog1',
+        imgSrc: blogImg1,
+        pin: 'Wood',
+        title: 'Going all-in with millennial design' 
+    },
+    {
+        id: 'blog2',
+        imgSrc: blogImg2,
+        pin: 'Handmade',
+        title: 'Exploring new ways of decorating' 
+    },
+    {
+        id: 'blog3',
+        imgSrc: blogImg3,
+        pin: 'Wood',
+        title: 'Handmade pieces that took time to make' 
+    },
+    {
+        id: 'blog4',
+        imgSrc: blogImg4,
+        pin: 'Handmade',
+        title: 'Bringing personality into every corner' 
+    },
+    {
+        id: 'blog5',
+        imgSrc: blogImg5,
+        pin: 'Handmade',
+        title: 'Where craftsmanship meets creativity' 
+    },
+    {
+        id: 'blog6',
+        imgSrc: blogImg6,
+        pin: 'Wood',
+        title: 'Curated pieces for contemporary spaces' 
+    },
+    {
+        id: 'blog7',
+        imgSrc: blogImg7,
+        pin: 'Wood',
+        title: 'Designing spaces for modern living' 
+    },
+    {
+        id: 'blog8',
+        imgSrc: blogImg8,
+        pin: 'Handmade',
+        title: 'Made to be lived in and loved' 
+    },
 ]
 
 export default function formatPrice(price) {
