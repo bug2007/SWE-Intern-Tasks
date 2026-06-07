@@ -11,6 +11,7 @@ import sofa1Img from '../assets/sofa1.png';
 import sofa2Img from '../assets/sofa2.png';
 import Products from "./Products";
 import { cartActions } from "../store/cart-slice";
+import { componentSliceActions } from "../store/component-slice";
 
 
 let para1 = <p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p>
@@ -117,7 +118,7 @@ export default function SingleProduct() {
                             <button onClick={handleDecreaseChooseQuantity}>-</button>{chooseQuantity}<button onClick={handleIncreaseChooseQuantity}>+</button>
                         </span>
                         <button onClick={addProdToCart}>Add To Cart</button>
-                        <button>+ Compare</button>
+                        <button onClick={() => dispatch(componentSliceActions.changePage('ProductComparison'))}>+ Compare</button>
                     </div>
                     <hr />
                     <div className="info">

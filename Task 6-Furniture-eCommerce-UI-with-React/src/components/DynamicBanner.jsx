@@ -9,7 +9,7 @@ export default function DynamicBanner({title}) {
             <div className='direction'>
                 <span>Home</span>
                 <img src={arrowImg} alt="" />
-                <span>{title}</span>
+                <span>{title === 'Product Comparison' ? 'Comparison' : title}</span>
             </div>
         </div>
     )

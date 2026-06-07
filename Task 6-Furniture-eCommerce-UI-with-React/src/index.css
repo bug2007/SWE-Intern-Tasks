@@ -815,6 +815,9 @@ button {
       height: 20px;
       cursor: pointer;
     }
+    img:first-child {
+      object-fit: cover;
+    }
   }
 }
 
@@ -1374,3 +1377,143 @@ dialog:modal {
     }
   }
 }
+
+/* Product Comparison */
+.compareContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 54px 112px;
+  .row1 {
+    display: flex;
+    gap: 47px;
+    justify-content: center;
+  }
+  .text-content {
+    margin-right: 28px;
+    p:first-child {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 21px;
+    }
+    p:last-child {
+      color: rgba(114, 114, 114, 1);
+      text-decoration: underline;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+  .chooseProd {
+    margin-left: 22px;
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    select {
+      background-color: rgba(184, 142, 47, 1);
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      border-radius: 6px;
+      padding-left: 18px;
+      border: none;
+      outline: none;
+      width: 242px;
+      height: 39px;
+    }
+  }
+}
+
+.compare1, .compare2 {
+  >img {
+    width: 280px;
+    height: 177px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  p {
+    margin: 0;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  .price {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 6px 0 10px;
+  }
+  .rating {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 5px;
+  }
+  .review {
+    color: rgba(159, 159, 159, 1);
+    font-size: 13px;
+  }
+}
+
+.second-stars {
+  vertical-align: middle;
+}
+
+.second-vr {
+  height: 30px;
+  width: 1px;
+  border: 1px solid rgba(159, 159, 159, 1);
+  margin: 0 9px 0 16px;
+}
+
+.row2 {
+  margin-top: 64px;
+  width: 1376px;
+  display: grid;
+  grid-template-columns: repeat(4, 344px);
+  border-top: 1px solid rgba(232, 232, 232, 1);
+  >div {
+    padding-left: 62px;
+    padding-right: 34px;
+    p {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &:not(:nth-child(4n)) {
+      border-right: 1px solid rgba(232, 232, 232, 1);
+    }
+    &:not(:has(p, button)) {
+      font-size: 28px;
+      font-weight: 500;
+      &:not(:first-child):not(:empty) {
+        padding-top: 96px;
+      }
+    }
+    &:nth-child(4n + 1) {
+      padding-left: 90.655px;
+    }
+    &:first-child {
+      padding-top: 42px;
+    }
+    &:nth-child(4n + 87) {
+      padding-left: 37px;
+      padding-right: 65px;
+    }
+    button {
+      background-color: rgba(184, 142, 47, 1);
+      font-size: 20px;
+      color: white;
+      border: none;
+      outline: none;
+      padding: 17px 48px;
+      margin-top: 60px;
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+    
+  } 
+}
+
+
