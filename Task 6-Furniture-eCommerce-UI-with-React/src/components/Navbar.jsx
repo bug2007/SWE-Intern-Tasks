@@ -12,6 +12,7 @@ import CartSidebar from './CartSidebar';
 
 export default function Navbar() {
     const [scroll, setScroll] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
 
@@ -33,12 +34,12 @@ export default function Navbar() {
 
     return (
         <>
-            <div className={scroll ? 'navbar navbar-scroll' : 'navbar'}>
+            <div className={(scroll ? 'navbar navbar-scroll' : 'navbar') + (menuOpen ? ' menu-active': '')}>
                 <div className='navbar-logoBrand'>
                     <img src={logoImg} alt="Logo Image" />
                     <span>Furniro</span>
                 </div>
-                <div className='navbar-links'>
+                <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
                     <ul>
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Home')}>Home</a></li>
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Shop')}>Shop</a></li>
@@ -46,12 +47,14 @@ export default function Navbar() {
                         <li><a href="" onClick={(event) => handleLinkClick(event, 'Contact')}>Contact</a></li>
                     </ul>
                 </div>
-                <div className='navbar-icons'>
+                <div className={`navbar-icons ${menuOpen ? 'active' : ''}`}>
                     <a href="#"><img src={navbarIcon1} alt="Account alert" /></a>
                     <a href="#"><img src={navbarIcon2} alt="Search" /></a>
                     <a href="#"><img src={navbarIcon3} alt="Heart" /></a>
                     <a href="" onClick={(event) => { event.preventDefault(); dispatch(cartActions.openCartSidebar())}}><img src={navbarIcon4} alt="Shopping Cart" /></a>
                 </div>
+                
+                <i className={`menuToggle bi ${menuOpen ? 'bi-x' : 'bi-list'}`} onClick={() => setMenuOpen(prevState => !prevState)}></i>
             </div>
             {cart.showCartSidebar && <CartSidebar products={cart.products} bigTotal={cart.bigTotal} />}
         </>
