@@ -10,7 +10,7 @@ export default function Products({heading, start, end, button}) {
             <div className="our-products-flex">
                 {PRODUCTS.slice(start, end).map((product) =>  <ProductItem key={product.id} product={product} />)}
             </div>
-            {button && <Button type="second-type">Show More</Button>}
+            {button && <Button type="second-type showMorebtn">Show More</Button>}
         </div>
     )
-}
+} 
