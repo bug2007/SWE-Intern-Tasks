@@ -79,7 +79,7 @@ export default function Blog() {
             </div>
             <div className="page-buttons">
                 {buttons}
-                <button onClick={() => {activeBtn < 3 && handleButtonClick(activeBtn + 1)}}>Next</button>
+                <button onClick={() => {activeBtn < TOTAL_BUTTONS && handleButtonClick(activeBtn + 1)}}>Next</button>
             </div>
         </div>
         <Features />

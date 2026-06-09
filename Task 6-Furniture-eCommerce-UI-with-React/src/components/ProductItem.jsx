@@ -1,5 +1,5 @@
 import formatPrice from "../data";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { componentSliceActions } from "../store/component-slice";
 import likeIconImg from '../assets/likeIcon.png';
 import shareIconImg from '../assets/shareIcon.png';
@@ -7,6 +7,7 @@ import compareconImg from '../assets/compareIcon.png';
 import { cartActions } from "../store/cart-slice";
 
 export default function ProductItem({product, onSelect}) {
+    const currentComponent = useSelector(state => state.component.currentComponent);
     const dispatch = useDispatch();
     
     let currentPrice = product.originalPrice;
@@ -16,7 +17,17 @@ export default function ProductItem({product, onSelect}) {
 
     function handleSelectProduct() {
         dispatch(componentSliceActions.selectProduct({...product, currentPrice}))
-        dispatch(componentSliceActions.changePage('SingleProduct'))
+        if (currentComponent === 'SingleProduct') {
+            dispatch(componentSliceActions.changePage('SingleProduct'))
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            dispatch(componentSliceActions.changePage('SingleProduct'))
+            window.scrollTo(0, 0)
+        }
     }
  
     return (

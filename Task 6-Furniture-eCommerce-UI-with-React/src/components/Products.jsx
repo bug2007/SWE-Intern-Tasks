@@ -13,4 +13,4 @@ export default function Products({heading, start, end, button}) {
             {button && <Button type="second-type showMorebtn">Show More</Button>}
         </div>
     )
-} 
+}   

@@ -4,7 +4,8 @@ import carouselImg2 from '../assets/carouselimg2.png';
 import carouselImg3 from '../assets/carouselimg3.png';
 import carouselImg4 from '../assets/carouselimg4.png';
 import carouselImg5 from '../assets/carouselimg5.png';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { useEffect } from 'react';
 
 const carouselImages = [
     carouselImg1,
@@ -16,6 +17,21 @@ const carouselImages = [
 
 export default function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [imageWidth, setImageWidth] = useState(376+24);
+    const image = useRef();
+
+    useEffect(() => {
+        function updateImageWidth() {
+            if (image.current) {
+                const width = image.current.getBoundingClientRect().width;
+                setImageWidth(width + 24);
+            }
+        }
+        updateImageWidth();
+        window.addEventListener('resize', updateImageWidth);
+        
+        return () => window.removeEventListener('resize', updateImageWidth);
+    }, [carouselImages]);
 
     function handleNext() {
         setActiveIndex(prevIndex => prevIndex + 1);
@@ -29,7 +45,7 @@ export default function Carousel() {
         buttons.push(<button key={i} className={i === activeIndex ? 'active' : ''} />)
     }
 
-    const offset = -(activeIndex * (372 + 24));
+    const offset = -(activeIndex * imageWidth);
 
     return (
         <div className="carousel">
@@ -52,7 +68,7 @@ export default function Carousel() {
                 <div className="carousel-images">
                     <div className="images" style={{transform: `translateX(${offset}px)`}}>
                         {carouselImages.map((carouselImage, index) => 
-                        <img style={{visibility: index < activeIndex ? 'hidden' : 'visible'}} key={carouselImage} src={carouselImage} />
+                        <img ref={index === 0 ? image : null} style={{visibility: index < activeIndex ? 'hidden' : 'visible'}} key={carouselImage} src={carouselImage} />
                     )}
                     </div>
                     <div className='navButtons'>

@@ -7,4 +7,4 @@ const store = configureStore({
     reducer: {component: componentSlice.reducer, cart: cartSlice.reducer}
 })
 
-export default store;
+export default store; 
