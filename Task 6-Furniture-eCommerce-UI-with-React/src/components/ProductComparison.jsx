@@ -5,6 +5,7 @@ import compareImg2 from '../assets/compare2.jpg';
 import starImg from '../assets/star.png';
 import halfStarImg from '../assets/halfStar.png';
 import { cartActions } from "../store/cart-slice";
+import { componentSliceActions } from '../store/component-slice';
 import { useDispatch } from 'react-redux';
 
 const stars = [];
@@ -26,29 +27,33 @@ export default function ProductComparison() {
                     <p>View More</p>
                 </div>
                 <div className="compare1">
-                    <img src={compareImg1} alt="Image 1" />
-                    <p className="title">Asgaard Sofa</p>
-                    <p className="price">Rs. 250,000.00</p>
-                    <p>
-                        <span className="rating">4.7</span>
-                        <span className="second-stars">{stars}</span>
-                        <span className="second-vr"></span>
-                        <span className="review">204 Review</span>
-                    </p>
+                    <img onClick={() => dispatch(componentSliceActions.changePage('SingleProduct'))} src={compareImg1} alt="Image 1" />
+                    <div>
+                        <p className="title">Asgaard Sofa</p>
+                        <p className="price">Rs. 250,000.00</p>
+                        <p>
+                            <span className="rating">4.7</span>
+                            <span className="second-stars">{stars}</span>
+                            <span className="second-vr"></span>
+                            <span className="review">204 Review</span>
+                        </p>
+                    </div>
                 </div>
                 <div className="compare2">
-                    <img src={compareImg2} alt="Image 2" />
-                    <p className="title">Outdoor Sofa Set</p>
-                    <p className="price">Rs. 224,000.00</p>
-                    <p>
-                        <span className="rating">4.2</span>
-                        <span className="second-stars">{stars}</span>
-                        <span className="second-vr"></span>
-                        <span className="review">145 Review</span>
-                    </p>
+                    <img onClick={() => dispatch(componentSliceActions.changePage('SingleProduct'))} src={compareImg2} alt="Image 2" />
+                    <div>
+                        <p className="title">Outdoor Sofa Set</p>
+                        <p className="price">Rs. 224,000.00</p>
+                        <p>
+                            <span className="rating">4.2</span>
+                            <span className="second-stars">{stars}</span>
+                            <span className="second-vr"></span>
+                            <span className="review">145 Review</span>
+                        </p>
+                    </div>
                 </div>
                 <div className="chooseProd">
-                    <p>Add A Product</p>
+                    <p className="addProduct-text">Add A Product</p>
                     <select name="chooseProd" id="chooseProd">
                         <option value="" disabled selected>Choose a Product</option>
                         <option value="Asgaard Sofa">Asgaard Sofa</option>
@@ -185,4 +190,4 @@ export default function ProductComparison() {
         <Features />
         </>
     )
-}
+} 
