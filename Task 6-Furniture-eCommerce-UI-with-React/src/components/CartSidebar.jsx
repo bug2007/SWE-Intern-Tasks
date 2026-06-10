@@ -18,17 +18,19 @@ export default function CartSidebar({products, bigTotal}) {
         <div className="cartSidebar">
             <div className="header">
                 <span>Shopping Cart</span>
-                <span onClick={() => dispatch(cartActions.closeCartSidebar())}>X</span>
+                <span onClick={() => dispatch(cartActions.closeCartSidebar())}><i className="bi bi-x"></i></span>
             </div>
             <hr />
             <ul className="itemList">
                 {products.length === 0 && <p>You have not added any items in your cart</p>}
                 {products.length>0 && products.map((product) => 
                     <li key={product.id}>
-                        <img src={product.imgSrc} alt={product.title} />
                         <div>
-                            <p>{product.title}</p>
-                            <p><span>{product.quantity}</span> <span className="x">X</span> <span>Rs. {formatPrice(product.price)}</span></p>
+                            <img src={product.imgSrc} alt={product.title} />
+                            <div>
+                                <p>{product.title}</p>
+                                <p><span>{product.quantity}</span> <span className="x">X</span> <span>Rs. {formatPrice(product.price)}</span></p>
+                            </div>
                         </div>
                         <img src={removeItemButtonImg} onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'full'}))} alt="Remove item from cart" />
                     </li>)}
@@ -45,4 +47,4 @@ export default function CartSidebar({products, bigTotal}) {
         </div>
         </>
     )
-}
+} 
