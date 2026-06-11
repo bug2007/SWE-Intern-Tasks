@@ -8,8 +8,11 @@ import Shop from "./components/Shop";
 import SingleProduct from "./components/SingleProduct";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
+import CartNotification from "./components/CartNotification";
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { cartActions } from "./store/cart-slice";
 
 
 const COMPONENTS = {
@@ -26,9 +29,21 @@ const COMPONENTS = {
 function App() {
   const currentComponent = useSelector(state => state.component.currentComponent);
   const CurrentComponent = COMPONENTS[currentComponent];
+  const notification = useSelector(state => state.cart.notification);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!notification) return;
+    const timer = setTimeout(()=> {
+      dispatch(cartActions.clearNotification());
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [notification])
 
   return (
     <>
+      {notification && <CartNotification key={notification.id} message={notification.message} />}
       <Navbar />
       <CurrentComponent />
       <Footer />

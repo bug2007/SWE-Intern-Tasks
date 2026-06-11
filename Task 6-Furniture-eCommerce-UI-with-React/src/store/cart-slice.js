@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
     name: 'cartSlice',
-    initialState: { products: [], bigTotal: 0, showCartSidebar: false, totalQuantity: 0},  // products: [{id, title, quantity, price, totalPrice}]
+    initialState: { products: [], bigTotal: 0, showCartSidebar: false, totalQuantity: 0, notification: null},  // products: [{id, title, quantity, price, totalPrice}]
     reducers: { 
         addToCart(state, action) {
             const newProd = action.payload;
@@ -22,6 +22,7 @@ const cartSlice = createSlice({
                 existingProd.quantity += newProd.quantity,
                 existingProd.totalPrice += newProd.price * newProd.quantity
             }
+            state.notification = {id: Date.now(), message: `Added ${newProd.title} to cart successfully!`};
         },  
         removeFromCart(state, action) {
             const id = action.payload.id;
@@ -30,11 +31,14 @@ const cartSlice = createSlice({
             if ((deleteQuantity === 'full') || (deleteQuantity === 'one' && existingProd.quantity === 1)) {
                 state.bigTotal -= existingProd.totalPrice;
                 state.products = state.products.filter(product => product.id !== id)
+                state.totalQuantity -= existingProd.quantity
             } else {
                 existingProd.quantity--;
                 existingProd.totalPrice -= existingProd.price;
                 state.bigTotal -= existingProd.price;
+                state.totalQuantity--;
             }
+            state.notification = {id: Date.now(), message: `Removed ${existingProd.title} from cart successfully!`};
         },
         openCartSidebar(state) {
             state.showCartSidebar = true
@@ -45,9 +49,13 @@ const cartSlice = createSlice({
         clearCart(state) {
            state.products = [];
            state.bigTotal = 0; 
+        },
+        clearNotification(state) {
+            state.notification = null;
         }
     }
 })
+
 
 export const cartActions = cartSlice.actions;
 export default cartSlice;

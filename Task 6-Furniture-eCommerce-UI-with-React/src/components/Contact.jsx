@@ -16,7 +16,7 @@ export default function Contact() {
         const email = fd.get('email');
         const subject = fd.get('subject');
         const message = fd.get('message');
-
+ 
         modal.current.open();
 
         return {enteredValues: {name, email, subject, message}}
@@ -74,7 +74,7 @@ export default function Contact() {
                         <label htmlFor="message">Message</label>
                         <textarea name="message" id="message" placeholder="Hi! i'd like to ask about" required defaultValue={formState?.enteredValues?.message}></textarea>
                     </div>
-                    <button className="contactBtn" disabled={formState}>Submit</button>
+                    <button className="contactBtn">Submit</button>
                 </form>
             </div>
         </div>

@@ -18,4 +18,4 @@ export default function Modal({children, ref}) {
             </form>
         </dialog>
     )
-}
+} 

@@ -28,7 +28,7 @@ export default function ProductItem({product, onSelect}) {
             dispatch(componentSliceActions.changePage('SingleProduct'))
             window.scrollTo(0, 0)
         }
-    }
+    } 
  
     return (
         <div className='image-card' onClick={handleSelectProduct}>
