@@ -162,24 +162,26 @@ footer {
 .footer-links, .footer-help, .footer-newsletter {
   p {
     margin-bottom: 50px;
+    color: rgba(159, 159, 159, 1);
   }
+}
+
+.footer-links, .footer-help {
+  font-weight: 500;
 }
 
 .logoAddress .address {
   color: rgba(159, 159, 159, 1);
 }
 
-.footer-links, .footer-help, .footer-newsletter {
-  p {
-    color: rgba(159, 159, 159, 1);
-  }
-}
 
 /* Features */
 .features {
+  padding: 100px 53px;
   display: flex;
   justify-content: space-between;
-  padding: 100px 53px;
+  flex-wrap: wrap;
+  gap: 3vw;
   background-color: rgba(250, 243, 234, 1);
 }
 
@@ -187,7 +189,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 13.6px;
-
   img {
     width: 60px;
     height: 60px;
@@ -391,7 +392,7 @@ button {
 
 /* Our products */
 .our-products {
-  padding: 0 100px 69px;
+  padding: 0 32px 69px;
   .heading {
     text-align: center;
     font-size: 40px;
@@ -409,7 +410,7 @@ button {
 
 .our-products-flex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(285px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, min(285px, 100%));
   justify-content: center;
   gap: 32px;
 }
@@ -813,12 +814,14 @@ button {
 }
 
 .customise {
+  padding: 31px 100px;
   font-size: 20px;
   background-color: rgba(249, 241, 231, 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 31px 100px;
+  flex-wrap: wrap;
+  gap: 3vw;
   img {
     cursor: pointer;
   }
@@ -1971,6 +1974,65 @@ dialog:modal {
 
 /* Media Queries */ 
 @media (max-width: 992px) {
+  /* Features */
+  .features {
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px 32px;
+    .high-quality, .warranty-protection, .free-shipping, .support {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+      div p:first-child {
+        font-size: 20px;
+      }
+
+      div p:last-child {
+        font-size: 15px;
+      }
+    }
+  }
+  .customise {
+    gap: 0;
+    padding: 31px 32px;
+    flex-direction: column;
+    .flex-item-1 {
+      flex-wrap: wrap;
+      justify-content: center;
+      span:last-child {
+        text-align: center;
+        width: 100%;
+        margin: 25px 0;
+        font-size: 15px;
+      }
+      span:nth-child(2) {
+        font-size: 16px;
+      }
+      .vr {
+        display: none;
+      }
+    }
+    .flex-item-2 {
+      justify-content: space-between;
+      input, label {
+        font-size: 16px;
+      }
+      input {
+        width: 40px;
+        height: 40px;
+      }
+      >div {
+        gap: 10px;
+      }
+      #sortBy {
+        width: unset;
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+    }
+  }  
+    
   .copyright {
     text-align: center;
   }
@@ -2026,6 +2088,9 @@ dialog:modal {
   }
   .our-products {
     padding: 0 32px 65px;
+  }
+  .our-products-flex {
+    gap: 15px;
   }
   .notification {
     width: 30vw;
@@ -2134,32 +2199,6 @@ dialog:modal {
   .prevArrow {
     left: -0.8%;
   } */
-  .customise {
-    padding: 31px 70px;
-    .flex-item-1 {
-      span:nth-child(2) {
-        font-size: 16px;
-      }
-    }
-    .flex-item-2 {
-      justify-content: space-between;
-      input, label {
-        font-size: 16px;
-      }
-      input {
-        width: 40px;
-        height: 40px;
-      }
-      >div {
-        gap: 10px;
-      }
-      #sortBy {
-        width: unset;
-        font-size: 16px;
-        padding: 8px 16px;
-      }
-    }
-  }  
   .amountCartCompare-buttons {
     span, >button {
       width: 100%;
@@ -2256,6 +2295,27 @@ dialog:modal {
 }
 
 @media(max-width: 576px) {  
+  /* Dynamic Banner */
+  .dynamic-banner {
+    height: 200px;
+    >img {
+      width: 50px;
+      height: 50px;
+    }
+    p {
+      font-size: 25px;
+    }
+    .direction   {
+      img {
+        width: 6px;
+        height: 10px;
+      }
+      span {
+        font-size: 12px;
+      }  
+    }
+  }
+
   /* Our Products */
   .our-products {
     .heading {
@@ -2264,9 +2324,6 @@ dialog:modal {
     button {
       padding: 10px 35px;
     }
-  }
-  .our-products-flex {
-    gap: 40px;
   }
   .image-card {
     &:hover {
@@ -2288,47 +2345,6 @@ dialog:modal {
   .navbar-icons {
     &.active {
       top: 372%;
-    }
-  }
-
-  /* Features */
-  .features {
-    flex-direction: column;
-    gap: 30px;
-    padding: 35px 25px;
-    .high-quality, .warranty-protection, .free-shipping, .support {
-      img {
-        width: 35px;
-        height: 35px;
-      }
-      div p:first-child {
-        font-size: 20px;
-      }
-
-      div p:last-child {
-        font-size: 15px;
-      }
-    }
-  }
-
-  /* Dynamic Banner */
-  .dynamic-banner {
-    height: 200px;
-    >img {
-      width: 50px;
-      height: 50px;
-    }
-    p {
-      font-size: 25px;
-    }
-    .direction   {
-      img {
-        width: 6px;
-        height: 10px;
-      }
-      span {
-        font-size: 12px;
-      }  
     }
   }
 
@@ -2398,23 +2414,6 @@ dialog:modal {
       button {
         font-size: 16px;
         padding: 10px 20px;
-      }
-    }
-  }
-  .customise {
-    padding: 31px 32px;
-    flex-direction: column;
-    .flex-item-1 {
-      flex-wrap: wrap;
-      justify-content: center;
-      span:last-child {
-        text-align: center;
-        width: 100%;
-        margin: 25px 0;
-        font-size: 15px;
-      }
-      .vr {
-        display: none;
       }
     }
   }
