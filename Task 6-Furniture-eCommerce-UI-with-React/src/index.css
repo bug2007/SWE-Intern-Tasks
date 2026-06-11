@@ -93,7 +93,7 @@ body, html {
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.17);
   font-size: 16px;
-  padding: 48px 32px 38px;
+  padding: 48px 100px 38px;
   hr {
     border: 0;
     border-top: 1px solid rgba(217, 217, 217, 1);
@@ -131,7 +131,7 @@ footer {
 .footer {
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   gap: 10vw;
   .logo {
     font-weight: 700;
@@ -1817,18 +1817,25 @@ dialog:modal {
 
 /* Product Comparison */
 .compareContainer {
+  padding: 34px 32px 112px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 34px 54px 112px;
+  align-items: stretch;
   .row1 {
-    padding: 0 71px 64px 42px;
+    /* padding: 0 32px 64px 32px; */
+    padding-bottom: 64px;
     display: flex;
-    gap: 47px;
+    gap: 40px;
     justify-content: center;
+    >div {
+      flex: 0 1 auto;
+      min-width: 0;
+    }
   }
   .text-content {
-    margin-right: 28px;
+    /* margin-right: 2vw; */
+    max-width: 220px;
+    width: 100%;
     p:first-child {
       font-size: 28px;
       font-weight: 500;
@@ -1845,8 +1852,11 @@ dialog:modal {
   .chooseProd {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 22px;
+    /* margin-left: 1.5vw; */
+    margin-top: 45px;
+    min-width: 0;
+    max-width: 242px;
+    width: 100%;
     p {
       font-size: 24px;
       font-weight: 600;
@@ -1859,18 +1869,21 @@ dialog:modal {
       line-height: 126%;
       color: white;
       border-radius: 6px;
-      padding: 10px 0 10px 16px;
+      /* padding: 10px 0 10px 16px; */
       border: none;
       outline: none;
-      width: 242px;
+      width: 100%;
+      padding: 10px 16px;
     }
   }
 }
 
 .compare1, .compare2 {
+  max-width: 280px; 
+  width: 100%;
   >img {
-    width: 280px;
-    height: 177px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
   }
@@ -1906,9 +1919,13 @@ dialog:modal {
   margin: 0 9px 0 16px;
 }
 
+.row2-wrapper {
+  width: 100%;
+}
+
 .row2 {
   display: grid;
-  grid-template-columns: repeat(4, 344px);
+  grid-template-columns: repeat(4, minmax(250px, 334px));
   border-top: 1px solid rgba(232, 232, 232, 1);
   >div {
     padding-left: 62px;
@@ -1980,6 +1997,107 @@ dialog:modal {
 
 /* Media Queries */ 
 @media (max-width: 992px) {
+  .cartSidebar {
+    width: 100%;
+  }
+  .compareContainer {
+    padding: 45px 32px 60px;
+    .row1 {
+      .text-content {
+        display: none;
+      }
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0 64px 0;
+      gap: 40px;
+      .chooseProd {
+        margin: 0;
+        align-items: center;
+        margin-top: 20px;
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .compare1, .compare2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    >img {
+      width: 250px;
+      height: 150px;
+    }
+    .title {
+      font-size: 20px;
+      margin-top: 12px;
+    }
+    .price {
+      font-size: 16px;
+      margin: 6px 0;
+    }
+    .rating {
+      font-size: 14px;
+    }
+    .second-stars {
+      .fullStar, .halfStar {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+      }
+    }
+  }
+  .row2-wrapper {
+    overflow-x: auto;
+  }
+  .row2 {
+    min-width: max-content;
+    column-gap: 1px;
+    background-color: rgba(232, 232, 232, 1);
+    >div {
+      background-color: white;
+      border-right: none !important;
+      padding-left: 25px;
+      padding-right: 25px;
+      &:nth-child(4n) {
+        border-right: none;
+      }
+      p {
+        font-size: 16px;
+      }
+      &:not(:has(p, button)) {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 28px;
+        &:not(:first-child):not(:empty) {
+          padding-top: 50px;
+        }
+      }
+      &:nth-child(4n + 1) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      &:nth-child(4n + 87) {
+        padding-left: 25px;
+        padding-right: 20px;
+      }
+      button {
+        font-size: 16px;
+        padding: 12px 20px;
+        margin-top: 25px;
+        &:hover {
+          filter: brightness(110%);
+        }
+      }
+    }
+  }
+  /* .compareContainer {
+    padding: 45px 15px 60px;
+  }   */
+  
+  
   .singleProduct {
     padding-bottom: 0;
   }
@@ -2034,7 +2152,6 @@ dialog:modal {
     font-size: 18px;
   }
  
-  
   .listedImages {
     flex-direction: row;
     gap: 25px;
@@ -2278,14 +2395,47 @@ dialog:modal {
   .prevArrow {
     left: -0.8%;
   } */
+  
+}
+
+@media(max-width: 576px) {  
+   /* Cart Sidebar */
   .cartSidebar {
-    width: 100%;
+    width: 50%;
+    hr {
+      margin: 26px 30px;
+    }
+    .header {
+      margin: 28px 30px 0 30px;
+      span:first-child, span:last-child {
+        font-size: 20px;
+      }
+    }
   }
-  .compareContainer {
-    padding: 45px 15px 60px;
-  }  
+  .itemList {
+    padding: 0 30px 70px 30px;
+    li > div img {
+      width: 90px;
+      height: 90px;
+    }
+    >p{
+      text-align: center;
+    }
+  }
+  .subtotal {
+    padding: 20px 30px;
+  }
+  .cartSidebar-footer {
+    padding: 20px 30px;
+    button {
+      padding: 4px 22px;
+      border-radius: 25px;
+    }
+  }
+
+  /* Product Comparison */
   .row2 {
-    grid-template-columns: repeat(3, 115px);
+    grid-template-columns: repeat(4, 200px);
     >div {
       padding-left: 15px;
       padding-right: 15px;
@@ -2321,9 +2471,12 @@ dialog:modal {
       }
     }
   }
-}
 
-@media(max-width: 576px) {  
+  /* Cart */
+  .cartContainer {
+    padding: 50px 32px;
+    flex-direction: column;
+  }
   .descriptionContent {
     font-size: 14px;
   }
@@ -2476,137 +2629,5 @@ dialog:modal {
         padding: 10px 20px;
       }
     }
-  }
-
-  /* Cart Sidebar */
-  .cartSidebar {
-    width: 50%;
-    hr {
-      margin: 26px 30px;
-    }
-    .header {
-      margin: 28px 30px 0 30px;
-      span:first-child, span:last-child {
-        font-size: 20px;
-      }
-    }
-  }
-  .itemList {
-    padding: 0 30px 70px 30px;
-    li > div img {
-      width: 90px;
-      height: 90px;
-    }
-    >p{
-      text-align: center;
-    }
-  }
-  .subtotal {
-    padding: 20px 30px;
-  }
-  .cartSidebar-footer {
-    padding: 20px 30px;
-    button {
-      padding: 4px 22px;
-      border-radius: 25px;
-    }
-  }
-
-  /* Product Comparison */
-  .compareContainer {
-    padding: 45px 32px 60px;
-    .row1 {
-      .text-content {
-        display: none;
-      }
-      flex-direction: column;
-      align-items: center;
-      padding: 0 0 64px 0;
-      gap: 40px;
-      .chooseProd {
-        margin: 0;
-        align-items: center;
-        margin-top: 20px;
-        p {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  .compare1, .compare2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    >img {
-      width: 250px;
-      height: 150px;
-    }
-    .title {
-      font-size: 20px;
-      margin-top: 12px;
-    }
-    .price {
-      font-size: 16px;
-      margin: 6px 0;
-    }
-    .rating {
-      font-size: 14px;
-    }
-    .second-stars {
-      .fullStar, .halfStar {
-        width: 14px;
-        height: 14px;
-        object-fit: contain;
-      }
-    }
-  }
-  .row2 {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1px;
-    background-color: rgba(232, 232, 232, 1);
-    >div {
-      background-color: white;
-      border-right: none !important;
-      padding-left: 25px;
-      padding-right: 25px;
-      &:nth-child(4n) {
-        display: none;
-      }
-      p {
-        font-size: 16px;
-      }
-      &:not(:has(p, button)) {
-        font-size: 20px;
-        font-weight: 500;
-        padding-bottom: 28px;
-        &:not(:first-child):not(:empty) {
-          padding-top: 50px;
-        }
-      }
-      &:nth-child(4n + 1) {
-        padding-left: 25px;
-        padding-right: 25px;
-      }
-      &:nth-child(4n + 87) {
-        padding-left: 25px;
-        padding-right: 20px;
-      }
-      button {
-        font-size: 16px;
-        padding: 12px 20px;
-        margin-top: 25px;
-        &:hover {
-          filter: brightness(110%);
-        }
-      }
-    }
-  }
-
-  /* Cart */
-  .cartContainer {
-    padding: 50px 32px;
-    flex-direction: column;
   }
 }
