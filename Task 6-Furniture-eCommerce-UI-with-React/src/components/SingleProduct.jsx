@@ -15,7 +15,7 @@ let para1 = <p className="para1">Embodying the raw, wayward spirit of rock â€˜nâ
 
 let para2 = <p className="para2">Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</p>
 
-const stars = [];
+const stars = []; 
 for (let i=0; i<4; i++) {
     stars.push(<img className="fullStar" src={starImg} alt="Full star" />)
 }

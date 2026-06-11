@@ -915,7 +915,7 @@ button {
 .singleProduct-overview {
   display: flex;
   gap: 30px;
-  padding: 35px 100px 55px;
+  padding: 35px 32px 55px;
   justify-content: center;
 }
 
@@ -1065,8 +1065,9 @@ button {
   margin-top: 32px;
 
   span {
-    width: 123px;
-    height: 64px;
+    max-width: 123px;
+    width: 100%;
+    min-height: 64px;
     border: 1px solid rgba(159, 159, 159, 1);
     border-radius: 10px;
     display: flex;
@@ -1082,7 +1083,10 @@ button {
   }
 
   >button {
-    padding: 17px 48px;
+    padding: 15px 20px;
+    max-width: 215px;
+    width: 100%;
+    min-height: 64px;
     border-radius: 10px;
     font-size: 20px;
     background: transparent;
@@ -1100,7 +1104,7 @@ button {
 
 /*  */
 .description {
-  padding: 48px 100px 66px;
+  padding: 48px 32px 66px;
   border-top: 1px solid rgba(217, 217, 217, 1);
   border-bottom: 1px solid rgba(217, 217, 217, 1);
 
@@ -1141,7 +1145,9 @@ button {
     flex-shrink: 1;
     max-width: 605px;
     /* width will remain 100% always but when being 100%, if the img exceeds the size of 605px, then it cant be greater than 605px anyway */
-    width: 100%;  
+    /* width: 100%;   */
+    flex: 1 1 0;
+    min-width: 0;
     height: auto;
     object-fit: cover;
   }
@@ -1974,6 +1980,79 @@ dialog:modal {
 
 /* Media Queries */ 
 @media (max-width: 992px) {
+  .singleProduct {
+    padding-bottom: 0;
+  }
+  .singleProduct-direction {
+    padding: 31px 32px;
+    justify-content: center;
+    >img {
+      margin: 0 20px 0 10px;
+    }
+    .vr {
+      margin-right: 20px;
+    }
+  }
+  .singleProduct-overview {
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .listedImages {
+    flex-direction: row;
+  }
+  .img-lg {
+    width: 320px;
+    height: 400px;
+  }
+  .singleProduct-details {
+    margin-left: 0;
+    max-width: 100%;
+    align-self: flex-start;
+    .title {
+      font-size: 30px;
+    }
+    .price {
+      font-size: 20px;
+    }
+    hr {
+      margin: 41px 0;
+    }
+  }
+  .amountCartCompare-buttons {
+    margin-top: 60px;
+  }
+  .description {
+    ul {
+      gap: 40px;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  .descriptionContent {
+    font-size: 18px;
+  }
+ 
+  
+  .listedImages {
+    flex-direction: row;
+    gap: 25px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }  
+  .singleProduct-overview {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .singleProduct-details {
+    .info {
+      font-size: 14px;
+    }
+  }
+  
   /* Features */
   .features {
     flex-direction: column;
@@ -2199,56 +2278,6 @@ dialog:modal {
   .prevArrow {
     left: -0.8%;
   } */
-  .amountCartCompare-buttons {
-    span, >button {
-      width: 100%;
-      font-size: 13px;
-      padding: 12px 6px;
-      border-radius: 5px;
-    }
-    span {
-      justify-content: space-around;
-      height: auto;
-      padding: 0;
-    }
-  }
-  .listedImages {
-    flex-direction: row;
-    gap: 25px;
-    img {
-      width: 60px;
-      height: 60px;
-    }
-  }  
-  .singleProduct-overview {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .singleProduct-details {
-    .info {
-      font-size: 14px;
-    }
-  }
-  .description {
-    padding: 48px 30px;
-    ul {
-      gap: 25px;
-      font-size: 16px;
-      text-align: center;
-    }
-  }
-  .descriptionContent {
-    font-size: 14px;
-  }
-  .description-images {
-    flex-direction: column;
-  }
-  .singleProduct .heading {
-    font-size: 25px;
-    font-weight: 500;
-    color: black;
-    margin: 35px 0 20px 0;
-  }
   .cartSidebar {
     width: 100%;
   }
@@ -2295,6 +2324,37 @@ dialog:modal {
 }
 
 @media(max-width: 576px) {  
+  .descriptionContent {
+    font-size: 14px;
+  }
+  .description-images {
+    flex-direction: column;
+  }
+  .singleProduct .heading {
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    margin: 35px 0 20px 0;
+  }
+  .description {
+    ul {
+      gap: 25px;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .amountCartCompare-buttons {
+    span, >button {
+      font-size: 16px;
+      padding: 12px 6px;
+      border-radius: 5px;
+    }
+    span {
+      justify-content: space-around;
+      height: auto;
+      padding: 0;
+    }
+  }
   /* Dynamic Banner */
   .dynamic-banner {
     height: 200px;
@@ -2416,66 +2476,6 @@ dialog:modal {
         padding: 10px 20px;
       }
     }
-  }
-
-  /* Single Product */
-  .singleProduct {
-    padding-bottom: 0;
-  }
-  .singleProduct-direction {
-    padding: 31px 32px;
-    justify-content: center;
-    >img {
-      margin: 0 20px 0 10px;
-    }
-    .vr {
-      margin-right: 20px;
-    }
-  }
-  .singleProduct-overview {
-    padding: 32px 45px;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-  .listedImages {
-    flex-direction: row;
-  }
-  .img-lg {
-    width: 320px;
-    height: 400px;
-  }
-  .singleProduct-details {
-    margin-left: 0;
-    max-width: 100%;
-    align-self: flex-start;
-    .title {
-      font-size: 30px;
-    }
-    .price {
-      font-size: 20px;
-    }
-    hr {
-      margin: 41px 0;
-    }
-  }
-  .amountCartCompare-buttons {
-    margin-top: 60px;
-  }
-  .description {
-    padding: 48px 45px;
-    ul {
-      gap: 40px;
-      font-size: 22px;
-      text-align: center;
-    }
-  }
-  .descriptionContent {
-    font-size: 18px;
-  }
-  .description-images {
-    flex-direction: column;
-    align-items: center;
   }
 
   /* Cart Sidebar */
