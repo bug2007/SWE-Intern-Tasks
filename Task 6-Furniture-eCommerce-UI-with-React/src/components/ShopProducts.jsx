@@ -60,7 +60,7 @@ export default function ShopProducts() {
                     <div>
                         <label htmlFor="value">Show</label>
                         <input type="number" id="value" value={showValue[1] - showValue[0]} min='1' max={maxInput} onChange={(event) => handleInput(event.target.value)} /> 
-                    </div>
+                    </div> 
                     <div>
                         <label htmlFor="sortBy">Sort by</label>
                         <select name="sortBy" id="sortBy">

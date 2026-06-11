@@ -2,12 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
     name: 'cartSlice',
-    initialState: { products: [], bigTotal: 0, showCartSidebar: false},  // products: [{id, title, quantity, price, totalPrice}]
-    reducers: {
+    initialState: { products: [], bigTotal: 0, showCartSidebar: false, totalQuantity: 0},  // products: [{id, title, quantity, price, totalPrice}]
+    reducers: { 
         addToCart(state, action) {
             const newProd = action.payload;
             const existingProd = state.products.find(product => product.id === newProd.id)
             state.bigTotal += newProd.quantity * newProd.price;
+            state.totalQuantity += newProd.quantity;
             if (!existingProd) {
                 state.products.push({
                     id: newProd.id,

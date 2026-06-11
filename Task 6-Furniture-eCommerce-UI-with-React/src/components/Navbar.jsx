@@ -51,7 +51,10 @@ export default function Navbar() {
                     <a href="#"><img src={navbarIcon1} alt="Account alert" /></a>
                     <a href="#"><img src={navbarIcon2} alt="Search" /></a>
                     <a href="#"><img src={navbarIcon3} alt="Heart" /></a>
-                    <a href="" onClick={(event) => { event.preventDefault(); dispatch(cartActions.openCartSidebar())}}><img src={navbarIcon4} alt="Shopping Cart" /></a>
+                    <a href="" onClick={(event) => { event.preventDefault(); dispatch(cartActions.openCartSidebar())}}>
+                        <img src={navbarIcon4} alt="Shopping Cart" />
+                        <div className=''>{cart.totalQuantity}</div>
+                    </a>
                 </div>
                 
                 <i className={`menuToggle bi ${menuOpen ? 'bi-x' : 'bi-list'}`} onClick={() => setMenuOpen(prevState => !prevState)}></i>

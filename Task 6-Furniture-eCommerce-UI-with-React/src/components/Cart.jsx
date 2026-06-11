@@ -40,7 +40,7 @@ export default function Cart() {
                             <td><img className="product-image" src={product.imgSrc} alt="Product Image" /></td>
                             <td>{product.title}</td>
                             <td>Rs. {formatPrice(product.price)}</td>
-                            <td><span><span className="minus" onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'one'}))}>-</span>{product.quantity}<span className="+" onClick={() => dispatch(cartActions.addToCart({...product, quantity: 1}))}>+</span></span></td>
+                            <td><span><i className="bi bi-dash-lg" onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'one'}))}></i>{product.quantity}<i className="bi bi-plus-lg" onClick={() => dispatch(cartActions.addToCart({...product, quantity: 1}))}></i></span></td>
                             <td>Rs. {formatPrice(product.totalPrice)}</td>
                             <td><img onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'full'}))} className="trash-icon" src={trashImg} alt="Delete item from cart" /></td>
                         </tr>)}
@@ -63,4 +63,4 @@ export default function Cart() {
        <Features />
         </>
     )
-}
+} 

@@ -117,7 +117,7 @@ export default function SingleProduct() {
                         </span>
                         <button onClick={addProdToCart}>Add To Cart</button>
                         <button onClick={() => dispatch(componentSliceActions.changePage('ProductComparison'))}><i className="bi bi-plus-lg"></i> Compare</button>
-                    </div>
+                    </div> 
                     <hr />
                     <div className="info">
                         <p><span>SKU</span><span>:</span><span>SS001</span></p>
