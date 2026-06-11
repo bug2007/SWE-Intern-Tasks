@@ -22,13 +22,15 @@ const cartSlice = createSlice({
                 existingProd.quantity += newProd.quantity,
                 existingProd.totalPrice += newProd.price * newProd.quantity
             }
-            state.notification = {id: Date.now(), message: `Added ${newProd.title} to cart successfully!`};
+            state.notification = {id: Date.now(), message: `Added ${newProd.quantity} ${newProd.title} to cart successfully!`};
         },  
         removeFromCart(state, action) {
             const id = action.payload.id;
             const deleteQuantity = action.payload.quantity;
             const existingProd = state.products.find(product => product.id === id);
+            let removedQuantity = 1;
             if ((deleteQuantity === 'full') || (deleteQuantity === 'one' && existingProd.quantity === 1)) {
+                removedQuantity = existingProd.quantity;
                 state.bigTotal -= existingProd.totalPrice;
                 state.products = state.products.filter(product => product.id !== id)
                 state.totalQuantity -= existingProd.quantity
@@ -38,7 +40,7 @@ const cartSlice = createSlice({
                 state.bigTotal -= existingProd.price;
                 state.totalQuantity--;
             }
-            state.notification = {id: Date.now(), message: `Removed ${existingProd.title} from cart successfully!`};
+            state.notification = {id: Date.now(), message: `Removed ${removedQuantity} ${existingProd.title} from cart successfully!`};
         },
         openCartSidebar(state) {
             state.showCartSidebar = true
