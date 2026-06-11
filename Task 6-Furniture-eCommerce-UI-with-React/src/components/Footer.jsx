@@ -3,7 +3,7 @@ import { componentSliceActions } from "../store/component-slice";
 
 export default function Footer() {
     const dispatch = useDispatch();
-    return (
+    return ( 
         <footer>
             <div className="footer">
                 <div className="logoAddress">

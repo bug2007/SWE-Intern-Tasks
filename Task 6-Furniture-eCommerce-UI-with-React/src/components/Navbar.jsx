@@ -25,7 +25,7 @@ export default function Navbar() {
         return () => {
         window.removeEventListener('scroll', handleScroll);
         }
-    }, [])
+    }, []) 
 
     function handleLinkClick(event, component) {
         event.preventDefault();
