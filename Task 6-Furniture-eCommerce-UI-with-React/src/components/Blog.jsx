@@ -2,7 +2,6 @@ import DynamicBanner from "./DynamicBanner";
 import Features from "./Features";
 import BlogPost from "./BlogPost";
 import { useState } from "react";
-import searchBarImg from '../assets/navbar-icon2.png';
 
 import { RECENT_POSTS, BLOG_POSTS } from "../data";
 
@@ -47,7 +46,7 @@ export default function Blog() {
                 <div className="category-recentPosts">
                     <div className="searchBar">
                         <input type="text" />
-                        <img src={searchBarImg} alt="Search Icon" />
+                        <i class="bi bi-search"></i>
                     </div>
                     <div className="category">
                         <div className="categories">
@@ -75,7 +74,7 @@ export default function Blog() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
             <div className="page-buttons">
                 {buttons}

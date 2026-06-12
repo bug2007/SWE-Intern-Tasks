@@ -25,4 +25,4 @@ export default function BlogPost({title, pin, imgSrc, postDate}) {
             <p className='readMore-link'>Read more</p>
         </div>
     )
-}
+} 

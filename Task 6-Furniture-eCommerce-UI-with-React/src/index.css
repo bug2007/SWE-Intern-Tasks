@@ -1720,7 +1720,7 @@ dialog:modal {
 
 /* Blog */
 .blogContainer {
-  padding: 106px 100px 58px;
+  padding: 106px 32px 58px;
 }
 
 .blog-category-recentPosts {
@@ -1730,14 +1730,15 @@ dialog:modal {
 }
 
 .blogPosts {
-  max-width: 820px;
+  max-width: 817px;
+  width: 100%;
 }
 
 .blogPost {
   margin-bottom: 54px;
   >img {
-    width: 817px;
-    height: 500px;
+    width: 100%;
+    max-height: 500px;
     border-radius: 10px;
     object-fit: cover;
   }
@@ -1756,7 +1757,6 @@ dialog:modal {
 }
 
 .blogPost-title {
-  margin: 0;
   font-size: 30px;
   font-weight: 500;
 }
@@ -1769,51 +1769,57 @@ dialog:modal {
 }
 
 .readMore-link {
-  margin: 0;
   text-decoration: underline;
   cursor: pointer;
 }
 
+.category-recentPosts {
+  max-width: 311px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .searchBar {
   margin-bottom: 43px;
-  width: 311px;
+  width: 100%;
   height: 58px;
   position: relative;
   input {
     width: 100%;
     height: 100%;
-    padding: 0 0 0 13px;
+    padding: 0 50px 0 30px;
     border: 1px solid rgba(159, 159, 159, 1);
     outline: none;
     border-radius: 10px;
   }
-  img {
-    width: 19px;
-    height: 19px;
+  i {
+    font-size: 19px;
     position: absolute;
-    top: 19px;
-    right: 1px;
+    top: 25%;
+    left: 90%;
   }
 }
 
 .category {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 118px;
   align-items: center;
+  max-width: 251px;
+  width: 100%;
 }
 
 .categories {
-  width: 251px;
+  width: 100%;
   p {
-    margin: 0 0 33px 0;
+    margin-bottom: 33px;
     font-size: 24px;
     font-weight: 500;
   }
   ul {
-    margin: 0;
     list-style: none;
-    padding: 0;
   }
   li {
     color: rgba(159, 159, 159, 1);
@@ -1827,14 +1833,15 @@ dialog:modal {
 }
 
 .recentPosts {
-  width: 251px;
+  margin-bottom: 8rem;
+  width: 100%;
   >p {
     font-size: 24px;
     font-weight: 500;
+    margin-bottom: 26px;
   }
   ul {
     list-style: none;
-    padding: 0;
   }
   li {
     display: flex;
@@ -1843,11 +1850,8 @@ dialog:modal {
     &:not(:last-child) {
       margin-bottom: 39px;
     }
-    &:last-child {
-      margin-bottom: 8rem;
-    }
     p {
-      margin: 0 0 5px 0;
+      margin-bottom: 5px;
       font-size: 14px;
     }
     span {
@@ -1856,7 +1860,8 @@ dialog:modal {
     }
     cursor: pointer;
     img {
-      width: 80px;
+      max-width: 80px;
+      width: 100%;
       height: 80px;
       border-radius: 10px;
     }
@@ -2066,6 +2071,9 @@ dialog:modal {
     dialog {
       width: 50%;
     }
+  }
+  .blog-category-recentPosts {
+    flex-wrap: wrap;
   }
   .compareContainer {
     padding: 45px 32px 60px;
@@ -2476,6 +2484,40 @@ dialog:modal {
       }
     }
   }
+  .blogContainer {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    .page-buttons {
+      order: -1;
+      margin-bottom: 50px;
+      gap: 25px;
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .blogPost {
+    .list {
+      justify-content: space-between;
+      gap: 0;
+      margin-top: 5px;
+      img {
+        width: 13px;
+        width: 13px;
+      }
+      >div span {
+        font-size: 13px;
+      }
+    }
+  }
+  .blogPost-title {
+    font-size: 25px;
+  }
+  .recentPosts {
+    margin-bottom: 3rem;
+  }
   .contactContainer {
     padding-bottom: 80px;
     .heading {
@@ -2735,6 +2777,7 @@ dialog:modal {
       margin-bottom: 50px;
       order: -1;
       justify-content: center;
+      gap: 20px;
       button {
         font-size: 16px;
         padding: 10px 20px;
