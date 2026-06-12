@@ -34,7 +34,7 @@ export default function Checkout() {
 
         return {successMsg: 'Order placed successfully! Cart is cleared.', products: savedProducts, bigTotal: savedTotal, enteredValues: {firstName, lastName, companyName, countryRegion, address, townCity, province, zipCode, phone, email, additionalInfo, paymentMethod}}
     }
-
+ 
     const [formState, formAction] = useActionState(handleSubmitCheckoutForm, null)
     const productsToDisplay = formState?.products || products;
     const bigTotalToDisplay = formState?.bigTotal || bigTotal;

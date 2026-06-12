@@ -1442,94 +1442,106 @@ tbody tr td:nth-child(4) > span {
 
 /* Checkout */
 .checkoutContainer {
-  padding: 4rem 3rem 5.5rem;
+  padding: 98px 32px 123px;
   form {
     display: flex;
     justify-content: center;
     align-items: start;
-    gap: 8rem;
+    gap: 8vw;
+    flex-wrap: wrap;
   }
 }
 
 .firstColumn {
+  width: 100%;
+  max-width: 453px;
   > p{
     font-size: 36px;
     font-weight: 600;
-    margin: 0 0 2rem 0;
+    margin: 0 0 36px 0;
   }
   label {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     font-weight: 500;
   }
   > div:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+  }
+  .additional-info {
+    margin-top: 66px;
   }
   input, select {
     border-radius: 10px;
     border: 1px solid rgba(159, 159, 159, 1);
-    height: 75px;
+    padding: 26px 30px;
     outline: none;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    width: 453px;
+    width: 100%;
   }
 
   select {
-    padding: 0 23px;
     color: rgba(159, 159, 159, 1);
   }
 }
 
 .names {
   display: flex;
-  gap: 28px;
+  gap: 31px;
 }
 
-#first-name, #last-name {
-  width: 211px;
+.first-name, .last-name {
+  max-width: 211px;
+  width: 100%;
 }
 
 .secondColumn {
-  width: 533px;
-  margin-top: 2.5rem;
+  max-width: 533px;
+  width: 100%;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  /* align-items: stretch; */
   .heading, .product, .checkout-subtotal, .checkout-total {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
     align-items: center;
   }
   .heading {
     font-size: 24px;
     font-weight: 500;
+    margin-bottom: 14px;
   }
-  .product > span {
-    &:first-child {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    &:first-child span {
+  .product {
+    margin-bottom: 22px;
+    > span {
       &:first-child {
-        color: rgba(159, 159, 159, 1);
+        display: flex;
+        gap: 10px;
+        align-items: center;
       }
-      &:nth-child(2), &:last-child {
-        font-size: 12px;
-        font-weight: 500;
+      &:first-child span {
+        &:first-child {
+          color: rgba(159, 159, 159, 1);
+        }
+        &:nth-child(2), &:last-child {
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+      &:last-child {
+        font-weight: 300;
       }
     }
-    &:last-child {
+  }  
+  .checkout-subtotal {
+    margin-bottom: 22px;
+    span:last-child {
       font-weight: 300;
     }
-  }
-  .checkout-subtotal span:last-child {
-    font-weight: 300;
-  }
+  }  
   .checkout-total {
-    margin-bottom: 0;
     span:last-child {
       font-weight: 700;
       font-size: 24px;
@@ -1542,31 +1554,30 @@ tbody tr td:nth-child(4) > span {
   border: none;
   background-color: rgba(217, 217, 217, 1);
   height: 1px;
-  margin: 30px 0 20px;
+  margin: 33.5px 0 22.5px;
 }
 
 .paymentMethod-heading {
   font-size: 24px;
   font-weight: 500;
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
 }
 
 .radio-buttons {
   .radio-bank, .radio-cash {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-  }
-  input {
-    margin-right: 10px;
+    margin-bottom: 11px;
+    gap: 15px;
   }
 }
 
 .orderBtn {
-  width: 318px;
-  height: 64px;
+  max-width: 318px;
+  width: 100%;
+  padding: 17px 15px;
   border-radius: 15px;
-  margin-top: 30px;
+  margin-top: 39px;
   background: transparent;
   font-size: 20px;
   align-self: center;
@@ -1581,10 +1592,12 @@ button[disabled] {
   border-radius: 10px;
   text-align: center;
   margin-top: 3rem;
-  width: 318px;
+  max-width: 318px;
+  width: 100%;
   align-self: center;
   color: green;
   font-weight: 500;
+  padding: 20px 15px;
 }
 
 .noItemMsg {
@@ -2443,6 +2456,26 @@ dialog:modal {
         font-size: 20px;
       }
     }
+  }
+  .checkoutContainer {
+    padding-bottom: 90px;
+    .firstColumn {
+      > p{
+        font-size: 30px;
+      }
+      .names {
+        flex-direction: column;
+      }
+      .first-name, .last-name {
+        max-width: 453px;
+        width: 100%;
+      }
+    }
+  }
+  .orderBtn {
+    max-width: 150px;
+    font-size: 16px;
+    padding: 15px;
   }
   .cartTotalsContainer {
     padding-bottom: 50px;

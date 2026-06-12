@@ -51,6 +51,7 @@ const cartSlice = createSlice({
         clearCart(state) {
            state.products = [];
            state.bigTotal = 0; 
+           state.totalQuantity = 0;
         },
         clearNotification(state) {
             state.notification = null;
