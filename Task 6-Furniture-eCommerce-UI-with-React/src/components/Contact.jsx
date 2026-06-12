@@ -23,7 +23,7 @@ export default function Contact() {
     }
  
     return (
-        <>
+        <div className="contactPage">
         <Modal ref={modal}>
             <p>We'll get back to you soon.</p>
         </Modal>
@@ -79,6 +79,6 @@ export default function Contact() {
             </div>
         </div>
         <Features />
-        </>
+        </div>
     )
 }

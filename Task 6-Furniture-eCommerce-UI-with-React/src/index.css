@@ -1691,9 +1691,10 @@ dialog {
   border-radius: 10px;
   border: 1px solid black;
   width: 30vw;
-  height: 20vh;
+  padding: 25px 40px;
   p {
     font-size: 24px;
+    text-align: center;
   }
   button {
     background: rgba(184, 142, 47, 1);
@@ -1711,7 +1712,8 @@ dialog {
 dialog:modal { 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 25px;
   align-items: center;
   margin: auto !important;
 }
@@ -2059,6 +2061,11 @@ dialog:modal {
   .details-form {
     flex-wrap: wrap;
     gap: 100px;
+  }
+  .contactPage {
+    dialog {
+      width: 50%;
+    }
   }
   .compareContainer {
     padding: 45px 32px 60px;
@@ -2479,6 +2486,11 @@ dialog:modal {
     }
     .contactBtn {
       align-self: center;
+    }
+  }
+  .contactPage {
+    dialog {
+      width: 70%;
     }
   }
   .checkoutContainer {
