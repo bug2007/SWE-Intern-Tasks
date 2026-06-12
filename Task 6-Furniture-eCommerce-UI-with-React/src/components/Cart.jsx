@@ -23,38 +23,42 @@ export default function Cart() {
         {products.length === 0 && <p className="no-item-text">You have no items in your cart</p>}
             {products.length > 0 && 
             (<>
-            <table className="itemTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {products.map((product) =>
-                        <tr key={product.id}>
-                            <td><img className="product-image" src={product.imgSrc} alt="Product Image" /></td>
-                            <td>{product.title}</td>
-                            <td>Rs. {formatPrice(product.price)}</td>
-                            <td><span><i className="bi bi-dash-lg" onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'one'}))}></i>{product.quantity}<i className="bi bi-plus-lg" onClick={() => dispatch(cartActions.addToCart({...product, quantity: 1}))}></i></span></td>
-                            <td>Rs. {formatPrice(product.totalPrice)}</td>
-                            <td><img onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'full'}))} className="trash-icon" src={trashImg} alt="Delete item from cart" /></td>
-                        </tr>)}
-                </tbody>
-            </table>
+            <div className="table-wrapper">
+                <table className="itemTable">
+                    <thead> 
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {products.map((product) =>
+                            <tr key={product.id}>
+                                <td><img className="product-image" src={product.imgSrc} alt="Product Image" /></td>
+                                <td>{product.title}</td>
+                                <td>Rs. {formatPrice(product.price)}</td>
+                                <td><span><i className="bi bi-dash-lg" onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'one'}))}></i>{product.quantity}<i className="bi bi-plus-lg" onClick={() => dispatch(cartActions.addToCart({...product, quantity: 1}))}></i></span></td>
+                                <td>Rs. {formatPrice(product.totalPrice)}</td>
+                                <td><img onClick={() => dispatch(cartActions.removeFromCart({id: product.id, quantity: 'full'}))} className="trash-icon" src={trashImg} alt="Delete item from cart" /></td>
+                            </tr>)}
+                    </tbody>
+                </table>
+            </div>
             <div className="cartTotalsContainer">
                 <p>Cart Totals</p>
-                <div className="cartTotals-subtotal">
-                    <span>Subtotal</span>
-                    <span>Rs. {formatPrice(bigTotal)}</span>
-                </div>
-                <div className="cartTotals-total">
-                    <span>Total</span>
-                    <span>Rs. {formatPrice(bigTotal)}</span>
+                <div>
+                    <div className="cartTotals-subtotal">
+                        <span>Subtotal</span>
+                        <span>Rs. {formatPrice(bigTotal)}</span>
+                    </div>
+                    <div className="cartTotals-total">
+                        <span>Total</span>
+                        <span>Rs. {formatPrice(bigTotal)}</span>
+                    </div>
                 </div>
                 <button onClick={() => dispatch(componentSliceActions.changePage('Checkout'))}>Check Out</button>
             </div>
