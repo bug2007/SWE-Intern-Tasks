@@ -1502,7 +1502,7 @@ tbody tr td:nth-child(4) > span {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  /* align-items: stretch; */
+  align-items: center;
   .heading, .product, .checkout-subtotal, .checkout-total {
     display: flex;
     justify-content: space-between;
@@ -1608,14 +1608,12 @@ button[disabled] {
 
 /* Contact */
 .contactContainer {
-  padding: 98px 3rem 63px;
-  p {
-    margin: 0;
-  }
+  padding: 98px 32px 63px;
   .heading {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 7px;
   }
   .heading-2 {
     color: rgba(159, 159, 159, 1);
@@ -1626,11 +1624,13 @@ button[disabled] {
 .details-form {
   display: flex;
   justify-content: center;
-  gap: 9rem;
-  margin-top: 128px;
+  gap: 157px;
+  margin-top: 133px;
 }
 
 .details {
+  max-width: 265px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -1643,26 +1643,32 @@ button[disabled] {
   p:nth-of-type(1) {
     font-size: 24px;
     font-weight: 500;
+    line-height: 0.8;
+    margin-bottom: 10px;
   }
 }
 
 .details-form form {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 36px;
+  max-width: 528px;
+  width: 100%;
   label {
     display: block;
     font-weight: 500;
     margin-bottom: 22px;
   }
   input, textarea {
-    width: 528.75px;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid rgba(159, 159, 159, 1);
     font-family: 'Poppins', sans-serif;
     outline: none;
-    padding: 26px 0 26px 29px;
+    padding: 26px 31px;
+  }
+  textarea {
+    height: 120px;
   }
 }
 
@@ -1672,7 +1678,10 @@ button[disabled] {
   background-color: rgba(184, 142, 47, 1);
   color: rgba(255, 255, 255, 1);
   border: none;
-  padding: 13.75px 89px;
+  padding: 13.75px 15px;
+  max-width: 237px;
+  width: 100%;
+  font-size: 16px;
   &:hover {
     filter: brightness(110%);
   }
@@ -2046,6 +2055,10 @@ dialog:modal {
       margin-bottom: 50px;
       min-width: 900px;
     }
+  }
+  .details-form {
+    flex-wrap: wrap;
+    gap: 100px;
   }
   .compareContainer {
     padding: 45px 32px 60px;
@@ -2443,7 +2456,6 @@ dialog:modal {
 }
 
 @media(max-width: 576px) {  
-
    /* Cart Sidebar */
   .cartSidebar {
     width: 50%;
@@ -2455,6 +2467,18 @@ dialog:modal {
       span:first-child, span:last-child {
         font-size: 20px;
       }
+    }
+  }
+  .contactContainer {
+    padding-bottom: 80px;
+    .heading {
+      font-size: 30px;
+    }
+    .details-form {
+      margin-top: 7rem;
+    }
+    .contactBtn {
+      align-self: center;
     }
   }
   .checkoutContainer {

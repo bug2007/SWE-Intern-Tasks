@@ -21,7 +21,7 @@ export default function Contact() {
 
         return {enteredValues: {name, email, subject, message}}
     }
-
+ 
     return (
         <>
         <Modal ref={modal}>
@@ -37,7 +37,7 @@ export default function Contact() {
                         <img src={locationImg} alt="Location Icon" />
                         <div className="address-details">
                             <p>Address</p>
-                            <p>236 5th SE Avenue, New <br /> York NY10000, United <br /> States</p>
+                            <p>236 5th SE Avenue, New York NY10000, United States</p>
                         </div>
                     </div>
                     <div className="phone-content">
@@ -52,8 +52,8 @@ export default function Contact() {
                         <img src={clockImg} alt="Clock Icon" />
                         <div className="workingTime-details">
                             <p>Working Time</p>
-                            <p>Monday-Friday: 9:00 - <br /> 22:00</p>
-                            <p>Saturday-Sunday: 9:00 - <br /> 21:00</p>
+                            <p>Monday-Friday: 9:00 - 22:00</p>
+                            <p>Saturday-Sunday: 9:00 - 21:00</p>
                         </div>
                     </div>
                 </div>
