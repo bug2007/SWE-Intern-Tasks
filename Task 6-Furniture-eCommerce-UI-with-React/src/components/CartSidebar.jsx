@@ -13,7 +13,7 @@ export default function CartSidebar({products, bigTotal}) {
     // }, [products])
 
     return (
-        <>
+        <>  
         <div className="backdrop" onClick={() => dispatch(cartActions.closeCartSidebar())}></div>
         <div className="cartSidebar">
             <div className="header">

@@ -1172,7 +1172,7 @@ button {
   position: fixed;
   top: 0;
   right: 0;
-  width: 28%;
+  width: 40%;
   height: 100vh;
   background: white;
   z-index: 2005;
@@ -1211,6 +1211,7 @@ button {
   li {
     display: flex;
     justify-content: space-between;
+    gap: 60px;
     align-items: center;
     margin-bottom: 20px;
     >div {
@@ -1266,7 +1267,7 @@ button {
 
 .cartSidebar-footer {
   border-top: 1px solid rgba(217, 217, 217, 1);
-  padding: 26px 27px;
+  padding: 26px 37px;
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -2051,8 +2052,38 @@ dialog:modal {
 
 /* Media Queries */ 
 @media (max-width: 992px) {
+  /* Cart Sidebar */
   .cartSidebar {
-    width: 100%;
+    width: 65%;
+    hr {
+      margin: 26px 30px;
+    }
+    .header {
+      margin: 28px 30px 0 30px;
+      span:first-child, span:last-child {
+        font-size: 20px;
+      }
+    }
+  }
+  .itemList {
+    padding: 0 30px 70px 30px;
+    li > div img {
+      width: 90px;
+      height: 90px;
+    }
+    >p{
+      text-align: center;
+    }
+  }
+  .subtotal {
+    padding: 20px 30px;
+  }
+  .cartSidebar-footer {
+    padding: 20px 30px;
+    button {
+      padding: 4px 22px;
+      border-radius: 25px;
+    }
   }
   .cartContainer {
     .table-wrapper {
@@ -2471,18 +2502,8 @@ dialog:modal {
 }
 
 @media(max-width: 576px) {  
-   /* Cart Sidebar */
   .cartSidebar {
-    width: 50%;
-    hr {
-      margin: 26px 30px;
-    }
-    .header {
-      margin: 28px 30px 0 30px;
-      span:first-child, span:last-child {
-        font-size: 20px;
-      }
-    }
+    width: 100%;
   }
   .blogContainer {
     padding-top: 80px;
@@ -2570,26 +2591,7 @@ dialog:modal {
       font-size: 14px;
     }
   }
-  .itemList {
-    padding: 0 30px 70px 30px;
-    li > div img {
-      width: 90px;
-      height: 90px;
-    }
-    >p{
-      text-align: center;
-    }
-  }
-  .subtotal {
-    padding: 20px 30px;
-  }
-  .cartSidebar-footer {
-    padding: 20px 30px;
-    button {
-      padding: 4px 22px;
-      border-radius: 25px;
-    }
-  }
+  
 
   /* Product Comparison */
   .row2 {
