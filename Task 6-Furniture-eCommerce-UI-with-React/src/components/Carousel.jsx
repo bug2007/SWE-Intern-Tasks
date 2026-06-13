@@ -6,12 +6,15 @@ import carouselImg4 from '../assets/carouselimg4.png';
 import carouselImg5 from '../assets/carouselimg5.png';
 import { useState } from 'react';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const carouselImages = [
     carouselImg1,
@@ -21,10 +24,7 @@ const carouselImages = [
     carouselImg5
 ]
 
-export default function Carousel() {
-    const [prevEl, setPrevEl] = useState(null);
-    const [nextEl, setNextEl] = useState(null);
-    
+export default function Carousel() {    
     return (
         <div className="carousel">
             <div className="text-content">
@@ -43,31 +43,23 @@ export default function Carousel() {
                         <i className="bi bi-arrow-right"></i>
                     </div>
                 </div>
-                <div className="carousel-images">
+                <div className="carousel-images"> 
                     <Swiper
                         modules={[Navigation, Pagination]}
                         spaceBetween={24}          
-                        slidesPerView={'auto'}      // Allows cards to maintain their CSS widths dynamically
+                        slidesPerView={'auto'} // lets CSS control slide widths for off-screen overflow
                         loop={true}
-                        navigation={{
-                            prevEl: prevEl,
-                            nextEl: nextEl
-                        }}           
-                        pagination={{ clickable: true, el: '.swiper-pagination' }} // Automatically builds pagination indicators array loop
-                        className="mySwiper"
+                        // slidesOffsetAfter={100}
+                        simulateTouch={true}  // Enables desktop mouse dragging
+                        grabCursor={true}
+                        navigation 
+                        pagination={{ clickable: true }}
                     >
-                        {carouselImages.map((carouselImage) => (
-                            <SwiperSlide key={carouselImage}>
-                                <img src={carouselImage} alt="Carousel Image" />
+                        {carouselImages.map((carouselImage, index) => (
+                            <SwiperSlide key={index}>
+                                <img src={carouselImage} alt='' />
                             </SwiperSlide>
                         ))}
-                        <div className="swiper-pagination"></div>
-                        <button ref={(node) => setPrevEl(node)} className="prevArrow">
-                        <i className="bi bi-chevron-left"></i>
-                        </button>
-                        <button ref={(node) => setNextEl(node)} className="nextArrow">
-                            <i className="bi bi-chevron-right"></i>
-                        </button>
                     </Swiper>
                 </div>
             </div>
