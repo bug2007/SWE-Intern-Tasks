@@ -9,3 +9,4 @@
 - Doctor House - [Live Demo](https://doctor-house-fawn.vercel.app/)
 - Loader - [Live Demo](https://loader-mauve.vercel.app/)
 - Traveler and Booking UI - [Live Demo](https://traveler-booking-ui.vercel.app/)
+- Furniture e-commerce Website UI - [Live Demo](https://furniture-ecom-react.vercel.app/)
